@@ -19,8 +19,6 @@ def info(msg, char = "#", width = 75):
 def fetch(data_path, target_output, categories, force):
     # Free to share and use filter for bing image search
     LICENSE_FILTER = '+filterui:license-L2_L3_L4_L5_L6_L7'
-    assert len(categories) == 2, "This model can only distinguish between two things"
-
     categories = sorted(categories)
 
     raw = '_'.join(categories)
