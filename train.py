@@ -85,15 +85,15 @@ def main(run, data_path, output_path, target_output, epochs, batch, lr):
 
     # model
     info('Creating Model')
-    #base_model = tf.keras.applications.MobileNetV2(input_shape=img_shape,
-    #                                           include_top=False, 
-    #                                           weights='imagenet',
-    #                                           pooling='avg')
-
-    base_model = tf.keras.applications.VGG19(input_shape=img_shape,
+    base_model = tf.keras.applications.MobileNetV2(input_shape=img_shape,
                                                include_top=False, 
                                                weights='imagenet',
                                                pooling='avg')
+
+    #base_model = tf.keras.applications.VGG19(input_shape=img_shape,
+    #                                           include_top=False, 
+    #                                           weights='imagenet',
+    #                                           pooling='avg')
 
     base_model.trainable = True
 
