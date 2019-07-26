@@ -51,10 +51,10 @@ def example(base_path, rel_path, labelidx, image_size=160):
     
     return example
 
-def main(data_path, output_path, target_output, records, image_size, force):
+def main(source_path, target_path, records, image_size, force):
     info('Preprocess')
 
-    fetch_step = os.path.join(output_path, 'fetch.json')
+    fetch_step = os.path.join(source_path, 'metadata.json')
     print('Loading {}'.format(fetch_step))
 
     with open(fetch_step) as f:
@@ -63,13 +63,12 @@ def main(data_path, output_path, target_output, records, image_size, force):
     for i in fetch:
         print('{} => {}'.format(i, fetch[i]))
 
-    raw_folder = os.path.join(data_path, fetch['data'])
-    raw_csv = os.path.join(data_path, fetch['file'])
+    raw_csv = os.path.join(source_path, fetch['file'])
 
     # check for existing files on force clear
-    write_path = os.path.join(data_path, fetch['data'], 'tfrecords')
-    processed_files = os.path.join(target_output, '{}_records.csv'.format(fetch['data']))
-    out_file = os.path.join(target_output, 'prep.json')
+    write_path = os.path.join(target_path, 'tfrecords')
+    processed_files = os.path.join(target_path, 'files.csv')
+    out_file = os.path.join(target_path, 'metadata.json')
 
     if force and os.path.exists(write_path):
         info('Cleanup')
@@ -83,6 +82,9 @@ def main(data_path, output_path, target_output, records, image_size, force):
         os.remove(out_file)
     info('Processing Images')
     
+    if not os.path.exists(target_path):
+        os.makedirs(target_path)
+
     if not os.path.exists(write_path):
         os.makedirs(write_path)
 
@@ -105,7 +107,7 @@ def main(data_path, output_path, target_output, records, image_size, force):
                 writer = tf.io.TFRecordWriter(tfrecord)
             try:
                 print('Trying {}...'.format(row[0]), end=' ')
-                image = example(raw_folder, row[0], row[2], image_size)
+                image = example(source_path, row[0], row[2], image_size)
                 writer.write(image.SerializeToString())
                 total_records += 1
                 print('Success!')
@@ -121,11 +123,11 @@ def main(data_path, output_path, target_output, records, image_size, force):
     print('Writing out record listing to {}'.format(processed_files))
     with open(processed_files, 'w') as f:
         for line in tfrecords:
-            f.write('{}\n'.format(str(Path(line).relative_to(data_path))))
+            f.write('{}\n'.format(str(Path(line).relative_to(target_path))))
 
     output = {
-        'data': str(Path(write_path).relative_to(data_path)),
-        'file': str(Path(processed_files).relative_to(target_output)),
+        'data': str(Path(write_path).relative_to(target_path)),
+        'file': str(Path(processed_files).relative_to(target_path)),
         'image_size': image_size,
         'records': records,
         'categories': fetch['categories'],
@@ -139,16 +141,12 @@ def main(data_path, output_path, target_output, records, image_size, force):
     with open(str(out_file), 'w') as f:
         json.dump(output, f)
 
-    # copy metadata for posterity
-    shutil.copyfile(out_file, os.path.join(data_path, fetch['data'], 'tfmetadata.json'))
-
     print('Done!\nProcessed {} records.'.format(total_records))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='data cleaning for binary image task')
-    parser.add_argument('-d', '--data_path', help='directory to training data', default='data')
-    parser.add_argument('-o', '--output_path', help='directory to previous data step', default='data')
-    parser.add_argument('-t', '--target_output', help='target file to hold good data', default='data')
+    parser.add_argument('-s', '--source_path', help='directory to raw data', default='data')
+    parser.add_argument('-t', '--target_path', help='directory to cleaned data', default='data')
     parser.add_argument('-r', '--records', help='images per TFRecord', default=16, type=int)
     parser.add_argument('-i', '--image_size', help='resize height and width', default=160, type=int)
     parser.add_argument('-f', '--force', help='force clear all data', default=False, action='store_true')

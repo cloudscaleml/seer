@@ -21,9 +21,11 @@ class AMLCallback(tf.keras.callbacks.Callback):
     def on_train_batch_end(self, batch, logs=None):
         if not self.offline:
             for item in self.metrics:
-                self.run.log(item, logs[item])
+                if item in logs:
+                    self.run.log(item, logs[item])
 
     def on_epoch_end(self, epoch, logs=None):
         if not self.offline:
             for item in self.metrics:
-                self.run.log('epoch_{}'.format(item), logs[item])
+                if item in logs:
+                    self.run.log('epoch_{}'.format(item), logs[item])

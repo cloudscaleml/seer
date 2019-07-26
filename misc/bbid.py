@@ -63,8 +63,18 @@ def fetch_images_from_keyword(pool_sema: threading.Semaphore, keyword: str, outp
     last = ''
     while True:
         request_url='https://www.bing.com/images/async?q=' + urllib.parse.quote_plus(keyword) + '&first=' + str(current) + '&count=35&adlt=' + adlt + '&qft=' + ('' if filters is None else filters)
-        request=urllib.request.Request(request_url,None,headers=urlopenheader)
-        response=urllib.request.urlopen(request)
+        retry = 5
+        response = None
+        while retry > 0:
+            try:
+                request=urllib.request.Request(request_url,None,headers=urlopenheader)
+                response=urllib.request.urlopen(request)
+                break
+            except:
+                retry -= 1
+                print('Error fetching {}'.format(request_url))
+                print('Retries left: {}'.format(retry))
+    
         html = response.read().decode('utf8')
         links = re.findall('murl&quot;:&quot;(.*?)&quot;',html)
         try:

@@ -50,10 +50,13 @@ def parse_record(example_proto):
     return (image, label)
 
 
-def main(run, data_path, output_path, target_output, epochs, batch, lr):
+def main(run, source_path, target_path, epochs, batch, lr):
     info('Preprocess')
+    if not os.path.exists(target_path):
+        os.makedirs(target_path)
+
     # load tfrecord metadata
-    prep_step = os.path.join(output_path, 'prep.json')
+    prep_step = os.path.join(source_path, 'metadata.json')
     with open(prep_step) as f:
         prep = json.load(f)
 
@@ -64,10 +67,10 @@ def main(run, data_path, output_path, target_output, epochs, batch, lr):
     img_shape = (prep['image_size'], prep['image_size'], 3)
     record_sz = prep['records']
 
-    records = os.path.join(data_path, prep['file'])
+    records = os.path.join(source_path, prep['file'])
     print('Loading {}'.format(records))
     with open(records, 'r') as f:
-        filenames = [os.path.join(data_path, s.strip()) for s in f.readlines()]
+        filenames = [os.path.join(source_path, s.strip()) for s in f.readlines()]
     
     print('Splitting data:')
     train, test, val = split(filenames)
@@ -113,12 +116,9 @@ def main(run, data_path, output_path, target_output, epochs, batch, lr):
 
     # callbacks
     logaml = AMLCallback(run)
+    logaml.offline = False
     filename = datetime.now().strftime("%d.%b.%Y.%H.%M")
-    model_path = os.path.join(target_output, 'model')
-    if not os.path.exists(model_path):
-        os.makedirs(model_path)
-    checkpoint = ModelCheckpoint(os.path.join(model_path, filename + '.e{epoch:02d}-{accuracy:.2f}.hdf5'))
-
+    checkpoint = ModelCheckpoint(os.path.join(target_path, filename + '.e{epoch:02d}-{accuracy:.2f}.hdf5'))
 
     test_ds = tf.data.TFRecordDataset(test).map(parse_record).batch(batch)
     test_steps = math.ceil((len(test)*record_sz)/batch)
@@ -136,9 +136,8 @@ def main(run, data_path, output_path, target_output, epochs, batch, lr):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='data cleaning for binary image task')
-    parser.add_argument('-d', '--data_path', help='directory to training data', default='data')
-    parser.add_argument('-o', '--output_path', help='directory to previous data step', default='data')
-    parser.add_argument('-t', '--target_output', help='target file to hold data', default='data')
+    parser.add_argument('-s', '--source_path', help='directory to training data', default='data')
+    parser.add_argument('-t', '--target_path', help='directory to previous data step', default='data')
     parser.add_argument('-e', '--epochs', help='number of epochs', default=10, type=int)
     parser.add_argument('-b', '--batch', help='batch size', default=32, type=int)
     parser.add_argument('-l', '--lr', help='learning rate', default=0.0001, type=float)
@@ -153,12 +152,8 @@ if __name__ == "__main__":
     params = vars(args)
     for i in params:
         print('{} => {}'.format(i, params[i]))
-
-    # log output
-    if not offline:
-        for item in args:
-            if item != 'run':
-                run.log(item, args[item])
+        if not offline:
+            run.log(i, params[i])
 
     params['run'] = run
 
