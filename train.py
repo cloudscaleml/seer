@@ -27,16 +27,14 @@ def info(msg, char = "#", width = 75):
     print(char + "   %0*s" % ((-1*width)+5, msg) + char)
     print(char * width)
 
-def split(records, split=[8, 1, 1]):
+def split(records, split=[8, 2]):
     # normalize splits
     splits = np.array(split) / np.sum(np.array(split))
     # split data
     train_idx = int(len(records) * splits[0])
-    eval_idx = int(len(records) * splits[1])
     
     return records[:train_idx], \
-            records[train_idx:train_idx + eval_idx + 1], \
-            records[train_idx + eval_idx + 1:]
+            records[train_idx:]
 
 def parse_record(example_proto):
     # Parse the input tf.Example proto using the dictionary above.
@@ -73,10 +71,9 @@ def main(run, source_path, target_path, epochs, batch, lr):
         filenames = [os.path.join(source_path, s.strip()) for s in f.readlines()]
     
     print('Splitting data:')
-    train, test, val = split(filenames)
+    train, test = split(filenames)
     print('  Train: {}'.format(len(train)))
     print('   Test: {}'.format(len(test)))
-    print('    Val: {}'.format(len(val)))
 
     print('Creating training dataset')
     train_ds = tf.data.TFRecordDataset(train)
@@ -93,10 +90,13 @@ def main(run, source_path, target_path, epochs, batch, lr):
                                                weights='imagenet',
                                                pooling='avg')
 
-    #base_model = tf.keras.applications.VGG19(input_shape=img_shape,
+    #base_model = tf.keras.applications.ResNet50(input_shape=img_shape,
     #                                           include_top=False, 
     #                                           weights='imagenet',
     #                                           pooling='avg')
+
+    tf.keras.applications
+
 
     base_model.trainable = True
 
@@ -116,13 +116,16 @@ def main(run, source_path, target_path, epochs, batch, lr):
 
     # callbacks
     logaml = AMLCallback(run)
-    logaml.offline = False
     filename = datetime.now().strftime("%d.%b.%Y.%H.%M")
-    checkpoint = ModelCheckpoint(os.path.join(target_path, filename + '.e{epoch:02d}-{accuracy:.2f}.hdf5'))
+    checkpoint = ModelCheckpoint(os.path.join(target_path, filename + '.e{epoch:02d}-{accuracy:.2f}-v{val_accuracy:.2f}.hdf5'),
+                                 monitor='val_accuracy',
+                                 save_best_only=True)
 
+    # using both test and val in this case
     test_ds = tf.data.TFRecordDataset(test).map(parse_record).batch(batch)
     test_steps = math.ceil((len(test)*record_sz)/batch)
 
+    
     steps_per_epoch = math.ceil((len(train)*record_sz)/batch)
     history = model.fit(train_ds, 
                     epochs=epochs, 

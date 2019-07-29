@@ -19,7 +19,7 @@ def info(msg, char = "#", width = 75):
 def fetch(target_path, categories, force):
     # Free to share and use filter for bing image search
     LICENSE_FILTER = '+filterui:license-L2_L3_L4_L5_L6_L7'
-    categories = sorted(categories)
+    categories = sorted([a.strip() for a in categories.split(' ')])
 
     if not os.path.exists(target_path):
         print('Creating {}'.format(target_path))
@@ -102,7 +102,7 @@ def fetch(target_path, categories, force):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='data cleaning for binary image task')
     parser.add_argument('-t', '--target_path', help='target file to hold good data', default='data')
-    parser.add_argument('-c', '--categories', nargs='+', help='image categories to download', type=str, required=True)
+    parser.add_argument('-c', '--categories', help='image categories to download', type=str, required=True)
     parser.add_argument('-f', '--force', help='force clear all data', default=False, action='store_true')
     args = parser.parse_args()
 
