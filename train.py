@@ -134,6 +134,18 @@ def main(run, source_path, target_path, epochs, batch, lr):
                     validation_data=test_ds,
                     validation_steps=test_steps)
 
+    info('Writing metadata')
+    out_file = os.path.join(target_path, 'metadata.json')
+    output = {
+        'image_size': prep['image_size'],
+        'categories': prep['categories'],
+        'index': prep['index'],
+        'generated': datetime.now().strftime('%m/%d/%y %H:%M:%S'),
+    }
+
+    print('Writing out metadata to {}'.format(out_file))
+    with open(str(out_file), 'w') as f:
+        json.dump(output, f)
     print('Done!')
 
 
