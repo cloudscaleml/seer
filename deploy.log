@@ -1,0 +1,1985 @@
+2019-08-01T23:22:05,507789054+00:00 - nginx/run 
+2019-08-01T23:22:05,504341551+00:00 - gunicorn/run 
+2019-08-01T23:22:05,507406753+00:00 - iot-server/run 
+2019-08-01T23:22:05,513154658+00:00 - rsyslog/run 
+EdgeHubConnectionString and IOTEDGE_IOTHUBHOSTNAME are not set. Exiting...
+2019-08-01T23:22:05,841856715+00:00 - iot-server/finish 1 0
+2019-08-01T23:22:05,842773116+00:00 - Exit code 1 is normal. Not restarting iot-server.
+Starting gunicorn 19.9.0
+Listening at: http://127.0.0.1:9090 (14)
+Using worker: sync
+worker timeout is set to 300
+Booting worker with pid: 50
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:22:13,672 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:22:13,672 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:22:13,672 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:22:13,672 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:22:13,672 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:22:13.801369: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:22:13.807109: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:22:13.807268: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513c7b60 executing computations on platform Host. Devices:
+2019-08-01 23:22:13.807306: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 64
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:22:40,174 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:22:40,174 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:22:40,174 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:22:40,174 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:22:40,174 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:22:40.372560: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:22:40.378545: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:22:40.378810: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:22:40.378850: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 78
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:22:58,285 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:22:58,286 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:22:58,286 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:22:58,286 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:22:58,286 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:22:58.470982: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:22:58.478292: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:22:58.478537: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9bd0 executing computations on platform Host. Devices:
+2019-08-01 23:22:58.478569: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 92
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:23:16,910 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:23:16,910 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:23:16,910 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:23:16,910 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:23:16,910 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:23:17.101768: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:23:17.108336: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:23:17.108547: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513ba130 executing computations on platform Host. Devices:
+2019-08-01 23:23:17.108596: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 106
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:23:35,306 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:23:35,306 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:23:35,307 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:23:35,307 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:23:35,307 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:23:35.517249: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:23:35.525277: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:23:35.525519: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9df0 executing computations on platform Host. Devices:
+2019-08-01 23:23:35.525574: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 120
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:23:53,848 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:23:53,848 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:23:53,848 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:23:53,848 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:23:53,848 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:23:54.038202: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:23:54.044461: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:23:54.044723: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9df0 executing computations on platform Host. Devices:
+2019-08-01 23:23:54.044791: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 134
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:24:12,578 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:24:12,578 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:24:12,578 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:24:12,579 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:24:12,579 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:24:12.772388: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:24:12.779543: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:24:12.779804: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513ba0a0 executing computations on platform Host. Devices:
+2019-08-01 23:24:12.779872: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 148
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:24:31,521 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:24:31,521 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:24:31,522 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:24:31,522 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:24:31,522 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:24:31.715184: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:24:31.721767: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:24:31.721991: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9a50 executing computations on platform Host. Devices:
+2019-08-01 23:24:31.722047: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 162
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:24:51,165 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:24:51,165 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:24:51,165 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:24:51,165 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:24:51,166 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:24:51.351665: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:24:51.357611: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:24:51.357845: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9ff0 executing computations on platform Host. Devices:
+2019-08-01 23:24:51.357870: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 176
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:25:09,401 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:25:09,401 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:25:09,401 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:25:09,401 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:25:09,401 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:25:09.575476: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:25:09.581900: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:25:09.582134: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:25:09.582224: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 190
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:25:27,989 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:25:27,989 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:25:27,989 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:25:27,990 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:25:27,990 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:25:28.187963: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:25:28.197074: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:25:28.197303: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9a50 executing computations on platform Host. Devices:
+2019-08-01 23:25:28.197350: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 204
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:25:46,838 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:25:46,838 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:25:46,838 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:25:46,839 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:25:46,839 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:25:47.023595: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:25:47.029369: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:25:47.029589: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9bb0 executing computations on platform Host. Devices:
+2019-08-01 23:25:47.029615: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 218
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:26:05,117 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:26:05,117 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:26:05,117 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:26:05,117 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:26:05,117 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:26:05.315247: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:26:05.321743: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:26:05.321985: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9c80 executing computations on platform Host. Devices:
+2019-08-01 23:26:05.322025: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 232
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:26:23,733 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:26:23,733 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:26:23,733 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:26:23,733 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:26:23,733 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:26:23.944216: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:26:23.950786: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:26:23.951135: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9ff0 executing computations on platform Host. Devices:
+2019-08-01 23:26:23.951177: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 246
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:26:42,094 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:26:42,094 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:26:42,094 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:26:42,094 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:26:42,094 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:26:42.284344: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:26:42.291040: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:26:42.291291: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9a50 executing computations on platform Host. Devices:
+2019-08-01 23:26:42.291346: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 260
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:27:01,023 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:27:01,023 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:27:01,023 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:27:01,023 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:27:01,023 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:27:01.220884: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:27:01.227371: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:27:01.227939: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513ba0a0 executing computations on platform Host. Devices:
+2019-08-01 23:27:01.228009: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 274
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:27:19,649 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:27:19,650 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:27:19,650 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:27:19,650 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:27:19,650 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:27:19.838204: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:27:19.844554: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:27:19.844789: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9c50 executing computations on platform Host. Devices:
+2019-08-01 23:27:19.844846: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 288
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:27:38,248 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:27:38,249 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:27:38,249 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:27:38,249 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:27:38,249 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:27:38.450402: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:27:38.456608: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:27:38.456810: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9e40 executing computations on platform Host. Devices:
+2019-08-01 23:27:38.456935: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 302
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:27:56,306 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:27:56,306 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:27:56,306 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:27:56,307 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:27:56,307 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:27:56.509159: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:27:56.515265: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:27:56.515501: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:27:56.515582: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 316
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:28:14,691 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:28:14,691 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:28:14,691 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:28:14,691 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:28:14,691 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:28:14.892345: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:28:14.898711: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:28:14.898913: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:28:14.898960: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 330
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:28:33,117 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:28:33,117 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:28:33,117 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:28:33,117 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:28:33,118 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:28:33.319303: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:28:33.325189: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:28:33.325422: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513ba2e0 executing computations on platform Host. Devices:
+2019-08-01 23:28:33.325485: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 344
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:28:51,857 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:28:51,857 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:28:51,857 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:28:51,857 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:28:51,858 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:28:52.049061: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:28:52.055567: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:28:52.055762: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9a50 executing computations on platform Host. Devices:
+2019-08-01 23:28:52.055801: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 358
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:29:09,966 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:29:09,966 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:29:09,966 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:29:09,966 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:29:09,966 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:29:10.163810: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:29:10.169793: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:29:10.170020: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:29:10.170069: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 372
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:29:28,380 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:29:28,380 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:29:28,380 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:29:28,380 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:29:28,380 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:29:28.575628: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:29:28.581270: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:29:28.581438: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:29:28.581479: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 386
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:29:46,867 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:29:46,867 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:29:46,867 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:29:46,867 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:29:46,867 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:29:47.059317: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:29:47.065074: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:29:47.065249: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:29:47.065292: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 400
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:30:05,109 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:30:05,109 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:30:05,109 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:30:05,109 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:30:05,110 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:30:05.281710: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:30:05.288148: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:30:05.288365: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513ba2e0 executing computations on platform Host. Devices:
+2019-08-01 23:30:05.288402: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 414
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:30:23,350 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:30:23,351 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:30:23,351 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:30:23,351 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:30:23,351 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:30:23.540705: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:30:23.546275: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:30:23.546444: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:30:23.546493: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 428
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:30:41,744 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:30:41,744 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:30:41,744 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:30:41,744 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:30:41,744 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:30:41.924213: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:30:41.930122: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:30:41.930433: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9a50 executing computations on platform Host. Devices:
+2019-08-01 23:30:41.930539: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 442
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:31:00,318 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:31:00,318 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:31:00,319 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:31:00,319 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:31:00,319 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:31:00.499717: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:31:00.506145: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:31:00.506365: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:31:00.506431: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 456
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:31:18,998 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:31:18,999 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:31:18,999 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:31:18,999 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:31:18,999 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:31:19.213321: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:31:19.220521: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:31:19.220718: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:31:19.220773: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 470
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:31:37,498 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:31:37,498 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:31:37,498 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:31:37,498 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:31:37,498 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:31:37.686771: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:31:37.692564: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:31:37.692886: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:31:37.692924: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 484
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:31:55,688 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:31:55,688 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:31:55,688 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:31:55,688 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:31:55,688 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:31:55.888038: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:31:55.894533: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:31:55.894708: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:31:55.894761: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 498
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:32:14,376 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:32:14,376 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:32:14,376 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:32:14,376 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:32:14,377 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:32:14.570584: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:32:14.577640: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:32:14.577854: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9bd0 executing computations on platform Host. Devices:
+2019-08-01 23:32:14.577906: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 512
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:32:33,161 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:32:33,161 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:32:33,161 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:32:33,161 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:32:33,161 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:32:33.360166: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:32:33.365949: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:32:33.366175: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513ba130 executing computations on platform Host. Devices:
+2019-08-01 23:32:33.366275: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 526
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:32:51,566 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:32:51,566 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:32:51,566 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:32:51,566 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:32:51,566 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:32:51.763487: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:32:51.769328: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:32:51.769543: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9df0 executing computations on platform Host. Devices:
+2019-08-01 23:32:51.769593: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 540
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:33:10,598 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:33:10,598 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:33:10,598 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:33:10,598 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:33:10,599 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:33:10.795740: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:33:10.802781: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:33:10.803064: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9df0 executing computations on platform Host. Devices:
+2019-08-01 23:33:10.803115: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 554
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:33:29,128 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:33:29,128 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:33:29,128 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:33:29,128 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:33:29,129 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:33:29.313838: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:33:29.320270: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:33:29.320451: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513ba0a0 executing computations on platform Host. Devices:
+2019-08-01 23:33:29.320504: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 568
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:33:47,642 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:33:47,643 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:33:47,643 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:33:47,643 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:33:47,643 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:33:47.839671: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:33:47.845818: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:33:47.846010: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9a50 executing computations on platform Host. Devices:
+2019-08-01 23:33:47.846062: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 582
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:34:06,138 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:34:06,138 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:34:06,138 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:34:06,138 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:34:06,138 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:34:06.333833: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:34:06.339604: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:34:06.339775: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9ff0 executing computations on platform Host. Devices:
+2019-08-01 23:34:06.339816: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 596
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:34:24,778 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:34:24,778 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:34:24,778 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:34:24,778 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:34:24,779 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:34:24.965624: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:34:24.971399: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:34:24.971572: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:34:24.971613: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 610
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:34:43,028 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:34:43,028 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:34:43,028 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:34:43,029 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:34:43,029 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:34:43.221851: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:34:43.228587: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:34:43.228823: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9a50 executing computations on platform Host. Devices:
+2019-08-01 23:34:43.228861: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 624
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:35:01,696 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:35:01,696 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:35:01,696 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:35:01,696 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:35:01,696 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:35:01.888296: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:35:01.897081: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:35:01.897321: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9bb0 executing computations on platform Host. Devices:
+2019-08-01 23:35:01.897358: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 638
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:35:20,256 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:35:20,256 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:35:20,256 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:35:20,256 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:35:20,256 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:35:20.456759: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:35:20.463051: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:35:20.463323: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9c80 executing computations on platform Host. Devices:
+2019-08-01 23:35:20.463361: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 652
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:35:38,677 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:35:38,677 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:35:38,677 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:35:38,677 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:35:38,677 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:35:38.873956: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:35:38.880637: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:35:38.880881: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513ba0a0 executing computations on platform Host. Devices:
+2019-08-01 23:35:38.880914: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 666
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:35:57,109 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:35:57,109 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:35:57,109 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:35:57,109 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:35:57,109 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:35:57.295761: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:35:57.302605: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:35:57.302878: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9a50 executing computations on platform Host. Devices:
+2019-08-01 23:35:57.302902: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 680
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:36:15,925 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:36:15,925 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:36:15,925 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:36:15,925 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:36:15,925 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:36:16.125209: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:36:16.131421: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:36:16.132217: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513ba0a0 executing computations on platform Host. Devices:
+2019-08-01 23:36:16.132236: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 694
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:36:34,000 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:36:34,000 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:36:34,000 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:36:34,000 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:36:34,000 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:36:34.183635: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:36:34.189182: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:36:34.189398: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9c50 executing computations on platform Host. Devices:
+2019-08-01 23:36:34.189450: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 708
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:36:52,312 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:36:52,312 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:36:52,312 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:36:52,312 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:36:52,312 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:36:52.507411: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:36:52.513795: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:36:52.513987: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9e40 executing computations on platform Host. Devices:
+2019-08-01 23:36:52.514035: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 722
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:37:11,289 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:37:11,289 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:37:11,289 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:37:11,289 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:37:11,289 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:37:11.485550: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:37:11.491699: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:37:11.491940: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:37:11.491990: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 736
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:37:29,832 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:37:29,832 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:37:29,832 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:37:29,832 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:37:29,832 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:37:30.025632: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:37:30.031654: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:37:30.031882: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:37:30.031908: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 750
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:37:48,012 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:37:48,012 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:37:48,013 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:37:48,013 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:37:48,013 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:37:48.211443: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:37:48.218237: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:37:48.218503: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513ba2e0 executing computations on platform Host. Devices:
+2019-08-01 23:37:48.218523: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 764
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:38:06,132 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:38:06,132 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:38:06,132 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:38:06,132 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:38:06,132 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:38:06.320305: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:38:06.326551: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:38:06.326732: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9a50 executing computations on platform Host. Devices:
+2019-08-01 23:38:06.326753: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 778
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:38:24,644 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:38:24,644 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:38:24,644 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:38:24,644 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:38:24,644 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:38:24.840517: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:38:24.846412: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:38:24.846586: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:38:24.846618: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 792
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:38:43,239 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:38:43,239 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:38:43,239 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:38:43,239 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:38:43,239 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:38:43.447653: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:38:43.453935: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:38:43.454140: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:38:43.454187: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 806
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:39:01,673 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:39:01,673 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:39:01,673 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:39:01,673 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:39:01,673 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:39:01.860468: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:39:01.867233: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:39:01.867487: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:39:01.867585: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 820
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:39:20,348 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:39:20,349 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:39:20,349 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:39:20,349 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:39:20,349 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:39:20.545385: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:39:20.551318: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:39:20.551500: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513ba2e0 executing computations on platform Host. Devices:
+2019-08-01 23:39:20.551600: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 834
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:39:39,025 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:39:39,025 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:39:39,025 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:39:39,025 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:39:39,025 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:39:39.221820: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:39:39.229957: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:39:39.230285: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:39:39.230380: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 848
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:39:57,406 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:39:57,406 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:39:57,406 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:39:57,406 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:39:57,407 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:39:57.590840: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:39:57.596952: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:39:57.597114: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9a50 executing computations on platform Host. Devices:
+2019-08-01 23:39:57.597166: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 862
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:40:16,237 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:40:16,237 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:40:16,237 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:40:16,237 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:40:16,237 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:40:16.525521: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:40:16.531932: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:40:16.532124: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:40:16.532164: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 876
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:40:35,269 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:40:35,269 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:40:35,269 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:40:35,269 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:40:35,269 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:40:35.461133: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:40:35.467048: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:40:35.467229: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:40:35.467272: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 890
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:40:53,563 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:40:53,563 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:40:53,563 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:40:53,563 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:40:53,563 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:40:53.761223: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:40:53.767792: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:40:53.767997: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:40:53.768058: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 904
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:41:12,203 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:41:12,203 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:41:12,203 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:41:12,203 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:41:12,203 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:41:12.390230: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:41:12.396424: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:41:12.396646: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:41:12.396700: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 918
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:41:30,416 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:41:30,416 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:41:30,416 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:41:30,417 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:41:30,417 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:41:30.606014: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:41:30.612198: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:41:30.612372: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9bd0 executing computations on platform Host. Devices:
+2019-08-01 23:41:30.612402: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 932
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:41:48,990 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:41:48,991 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:41:48,991 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:41:48,991 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:41:48,991 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:41:49.197195: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:41:49.203656: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:41:49.203823: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513ba130 executing computations on platform Host. Devices:
+2019-08-01 23:41:49.203882: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 946
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:42:07,263 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:42:07,263 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:42:07,264 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:42:07,264 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:42:07,264 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:42:07.449262: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:42:07.456183: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:42:07.456402: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9df0 executing computations on platform Host. Devices:
+2019-08-01 23:42:07.456463: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 960
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:42:25,515 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:42:25,515 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:42:25,515 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:42:25,515 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:42:25,516 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:42:25.721445: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:42:25.727922: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:42:25.728129: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9df0 executing computations on platform Host. Devices:
+2019-08-01 23:42:25.728176: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 974
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:42:44,136 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:42:44,136 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:42:44,136 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:42:44,137 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:42:44,137 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:42:44.330394: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:42:44.336621: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:42:44.336816: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513ba0a0 executing computations on platform Host. Devices:
+2019-08-01 23:42:44.336861: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 988
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:43:02,419 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:43:02,419 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:43:02,419 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:43:02,419 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:43:02,419 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:43:02.612406: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:43:02.618340: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:43:02.618500: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9a50 executing computations on platform Host. Devices:
+2019-08-01 23:43:02.618581: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 1002
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:43:20,977 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:43:20,977 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:43:20,977 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:43:20,977 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:43:20,977 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:43:21.186305: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:43:21.192808: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:43:21.193007: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513ba0a0 executing computations on platform Host. Devices:
+2019-08-01 23:43:21.193076: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 1016
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:43:39,533 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:43:39,533 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:43:39,534 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:43:39,534 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:43:39,534 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:43:39.722755: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:43:39.729030: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:43:39.729195: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:43:39.729235: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 1030
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:43:58,045 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:43:58,045 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:43:58,046 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:43:58,046 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:43:58,046 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:43:58.258348: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:43:58.264784: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:43:58.264964: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9a50 executing computations on platform Host. Devices:
+2019-08-01 23:43:58.265008: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 1044
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:44:16,557 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:44:16,558 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:44:16,558 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:44:16,558 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:44:16,558 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:44:16.798959: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:44:16.804810: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:44:16.804977: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9bb0 executing computations on platform Host. Devices:
+2019-08-01 23:44:16.805034: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 1058
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:44:35,300 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:44:35,300 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:44:35,300 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:44:35,300 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:44:35,301 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:44:35.498702: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:44:35.504688: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:44:35.504887: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9c80 executing computations on platform Host. Devices:
+2019-08-01 23:44:35.504941: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 1072
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:44:53,601 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:44:53,601 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:44:53,601 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:44:53,601 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:44:53,601 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:44:53.798184: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:44:53.804205: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:44:53.804387: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513ba0a0 executing computations on platform Host. Devices:
+2019-08-01 23:44:53.804438: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 1086
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:45:12,001 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:45:12,001 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:45:12,002 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:45:12,002 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:45:12,002 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:45:12.197109: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:45:12.203495: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:45:12.203676: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9a50 executing computations on platform Host. Devices:
+2019-08-01 23:45:12.203722: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 1100
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:45:30,575 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:45:30,575 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:45:30,575 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:45:30,575 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:45:30,575 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:45:30.764885: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:45:30.770411: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:45:30.770663: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9ff0 executing computations on platform Host. Devices:
+2019-08-01 23:45:30.770744: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 1114
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:45:49,013 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:45:49,013 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:45:49,014 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:45:49,014 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:45:49,014 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:45:49.210976: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:45:49.217353: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:45:49.217567: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9c50 executing computations on platform Host. Devices:
+2019-08-01 23:45:49.217661: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 1128
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:46:07,635 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:46:07,635 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:46:07,636 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:46:07,636 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:46:07,636 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:46:07.839828: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:46:07.846411: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:46:07.846589: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9e40 executing computations on platform Host. Devices:
+2019-08-01 23:46:07.846676: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+worker timeout is set to 300
+Booting worker with pid: 1142
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-08-01 23:46:26,397 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-08-01 23:46:26,398 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-08-01 23:46:26,398 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-08-01 23:46:26,398 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-08-01 23:46:26,398 | azureml.core.model | DEBUG | Found model path at azureml-models/seer/1/model
+2019-08-01 23:46:26.607793: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-01 23:46:26.614214: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294685000 Hz
+2019-08-01 23:46:26.614483: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556a513b9b70 executing computations on platform Host. Devices:
+2019-08-01 23:46:26.614541: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+Loading azureml-models/seer/1/model/metadata.json
+image_size => 160
+categories => ['burrito', 'tacos']
+index => {'burrito': 0, 'tacos': 1}
+generated => 08/01/19 22:59:54
+Attempting to load model
+From /opt/miniconda/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where

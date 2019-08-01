@@ -17,7 +17,7 @@ def init():
     try:
         path = Model.get_model_path('seer')
     except:
-        path = 'data/train'
+        path = 'data/model'
 
     model_path = os.path.join(path, 'model.hdf5')
     meta_path = os.path.join(path, 'metadata.json')

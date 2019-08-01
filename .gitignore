@@ -7,4 +7,4 @@ outputs/
 *.dot
 *.npz
 Untitled.ipynb
-*.tfrecords
+*.tfrecords*.log
