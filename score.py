@@ -74,10 +74,10 @@ def run(raw_data):
 
     predictions = {}
     for i in range(len(pred)):
-        predictions[categories[i]] = pred[i]
+        predictions[categories[i]] = str(pred[i])
 
     payload = {
-        'time': inference_time.total_seconds(),
+        'time': str(inference_time.total_seconds()),
         'prediction': categories[int(np.argmax(pred))],
         'scores': predictions
     }
@@ -95,6 +95,7 @@ if __name__ == '__main__':
 
     print('\n---------------------\nInference with tacos:')
     t = run(json.dumps({'image': tacos}))
+    json.dumps(t)
     print('\n=======================')
     pprint.pprint(t)
 
