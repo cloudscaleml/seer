@@ -1,0 +1,1 @@
+az ml service update --name seer-svc --inference-config inferenceconfig.json --deploy-config-file deployconfig.json
