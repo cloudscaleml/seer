@@ -9,12 +9,12 @@ from azureml.train.estimator import Estimator
 import os
 
 # Get environment variables
-datastorename=os.environ('datastorename')
-containername=os.environ('containername')
-accountname=os.environ('accountname')
-accountkey=os.environ('storageaccountkey')
-datastorepath=os.environ('datapath')
-computetarget=os.environ('computetarget')
+datastorename=os.environ['datastorename']
+containername=os.environ['containername']
+accountname=os.environ['accountname']
+accountkey=os.environ['storageaccountkey']
+datastorepath=os.environ['datapath']
+computetarget=os.environ['computetarget']
 
 print("Azure ML SDK Version: ", azureml.core.VERSION)
 
