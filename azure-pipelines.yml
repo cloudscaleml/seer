@@ -22,6 +22,9 @@ steps:
     scriptLocation: inlineScript
     inlineScript: 'az extension add -n azure-cli-ml'
 
+- script: 'pip install --upgrade azureml-sdk[notebooks,automl,explain]'
+  displayName: 'Install AzureML'
+
 - task: AzureCLI@1
   displayName: 'Recreate and submit pipeline'
   inputs:
