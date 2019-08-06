@@ -10,21 +10,17 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: UsePythonVersion@0
+  displayName: 'Use Python 3.6'
+  inputs:
+    versionSpec: '3.6'
+
 - task: AzureCLI@1
   displayName: 'Install Azure ML CLI Extension'
   inputs:
     azureSubscription: 'ca-dabrady-demo-test (bc202ec2-54ef-4576-b7fb-a961c983398e)'
     scriptLocation: inlineScript
     inlineScript: 'az extension add -n azure-cli-ml'
-
-- task: AzureCLI@1
-  displayName: 'Install AzureML.core'
-  inputs:
-    azureSubscription: 'ca-dabrady-demo-test (bc202ec2-54ef-4576-b7fb-a961c983398e)'
-    scriptLocation: inlineScript
-    inlineScript: |
-      pip install -U pip
-      pip install --upgrade azureml-sdk[notebooks,automl,explain]
 
 - task: AzureCLI@1
   displayName: 'Recreate and submit pipeline'
