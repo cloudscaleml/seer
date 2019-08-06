@@ -17,8 +17,11 @@ steps:
     scriptLocation: inlineScript
     inlineScript: 'az extension add -n azure-cli-ml'
 
-- script: 'conda activate AzureML'
-  displayName: 'Install AzureML.Core'
+- task: AzureCLI@1
+  displayName: 'Install AzureML.core'
+  inputs:
+    azureSubscription: 'ca-dabrady-demo-test (bc202ec2-54ef-4576-b7fb-a961c983398e)'
+    inlineScript: 'pip install --upgrade azureml-sdk[notebooks,automl,explain]'
 
 - task: AzureCLI@1
   displayName: 'Recreate and submit pipeline'
