@@ -22,4 +22,4 @@ steps:
   inputs:
     azureSubscription: 'ca-dabrady-demo-test (bc202ec2-54ef-4576-b7fb-a961c983398e)'
     scriptLocation: inlineScript
-    inlineScript: 'python $(Pipeline.Workspace)/setup_pipeline.py'
+    inlineScript: 'python $(Build.Repository.LocalPath)/setup_pipeline.py'
