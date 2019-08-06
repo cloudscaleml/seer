@@ -23,13 +23,6 @@ ws = Workspace.from_config(
     path='./azureml-config.json')
 ws.datastores
 
-#datastore = Datastore.register_azure_blob_container(workspace=ws, 
-#                                             datastore_name='damoseerdata', 
-#                                             container_name='seer-container',
-#                                             account_name='damoaimlstorage', 
-#                                             account_key='PEeXp/eF8ddjhFWDrGY6VRL+uuZTj5AxxuZKZaPuoOsUNBEnNpBw0CUIARKs44SMKbHUI8rSfv3hkB1N6zYaAw==',
-#                                             create_if_not_exists=True)
-
 # data
 datastore = ws.datastores[datastorename]
 if datastore is None:
