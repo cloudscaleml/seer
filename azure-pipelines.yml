@@ -1,0 +1,25 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: AzureCLI@1
+  displayName: 'Install Azure ML CLI Extension'
+  inputs:
+    azureSubscription: 'ca-dabrady-demo-test (bc202ec2-54ef-4576-b7fb-a961c983398e)'
+    scriptLocation: inlineScript
+    inlineScript: 'az extension add -n azure-cli-ml'
+
+- task: AzureCLI@1
+  displayName: 'Recreate and submit pipeline'
+  inputs:
+    azureSubscription: 'ca-dabrady-demo-test (bc202ec2-54ef-4576-b7fb-a961c983398e)'
+    scriptLocation: inlineScript
+    inlineScript: 'python $(Pipeline.Workspace)/setup_pipeline.py'
