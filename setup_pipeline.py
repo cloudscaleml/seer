@@ -25,7 +25,7 @@ accountkey=''
 computetarget=''
 
 try:
-    print 'ARGV: ',sys.argv[1:]
+    print('ARGV: ',sys.argv[1:])
     opts, args = getopt.getopt(sys.argv[1:],"d:dc:p:a:k:c:")
 except getopt.GetoptError:
     printhelp
