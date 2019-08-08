@@ -23,6 +23,7 @@ datastorepath=''
 accountname=''
 computetarget=''
 accountkey=os.environ.get('ACCOUNT_KEY')
+print('Storage Account Key: ', accountkey)
 
 try:
     print('ARGV: ', sys.argv[1:])
