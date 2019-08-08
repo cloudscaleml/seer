@@ -59,11 +59,12 @@ print("Azure ML SDK Version: ", VERSION)
 # workspace
 ws = Workspace.from_config(
     path='./azureml-config.json')
-ws.datastores
+print(ws.datastores)
 
 # data
 datastore = ws.datastores[datastorename]
 if datastore is None:
+    print ('Datastore not found, registering.')
     datastore = Datastore.register_azure_blob_container(workspace=ws, 
                                                 datastore_name=datastorename, 
                                                 container_name=containername,
@@ -87,7 +88,7 @@ compute = ws.compute_targets[computetarget]
 # ## Pipeline Parameters
 # We need to tell the Pipeline what it needs to learn to see!
 
-datapath = DataPath(datastore=datastorename, path_on_datastore=datastorepath)
+datapath = DataPath(datastore=datastore, path_on_datastore=datastorepath)
 data_path_pipeline_param = (PipelineParameter(name="data", 
                                             default_value=datapath), 
                                             DataPathComputeBinding(mode='mount'))
