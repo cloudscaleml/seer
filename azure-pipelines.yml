@@ -22,7 +22,7 @@ steps:
     scriptLocation: inlineScript
     inlineScript: 'az extension add -n azure-cli-ml'
 
-- script: 'pip install --upgrade azureml-sdk[notebooks,automl,explain]'
+- script: 'pip install --upgrade azureml-sdk'
   displayName: 'Install AzureML'
 
 - task: AzureCLI@1
@@ -32,4 +32,6 @@ steps:
   inputs:
     azureSubscription: 'ca-dabrady-demo-test (bc202ec2-54ef-4576-b7fb-a961c983398e)'
     scriptLocation: inlineScript
-    inlineScript: 'python $(Build.Repository.LocalPath)/setup_pipeline.py -d $(datastorename) -dc $(containername) -p $(datastorepath) -a $(accountname) -k $(accountkey) -c $(computetarget)'
+    inlineScript: |
+      echo 'running python script:'
+      python $(Build.Repository.LocalPath)/setup_pipeline.py -d $(datastorename) -dc $(containername) -p $(datastorepath) -a $(accountname) -k $(accountkey) -c $(computetarget)
