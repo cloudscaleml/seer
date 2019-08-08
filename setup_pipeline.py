@@ -181,4 +181,5 @@ published_pipeline = pipeline.publish(
 pipeline_run = Experiment(ws, 'seer').submit(pipeline)
 #RunDetails(pipeline_run).show()
 
-print('Run created with ID: ', pipeline_run.run_id)
+print('Run created with ID: ', pipeline_run.id)
+print('URL in Azure Portal: ', pipeline_run.PORTAL_URL)
