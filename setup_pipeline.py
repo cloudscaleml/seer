@@ -4,7 +4,6 @@ from azureml.data.data_reference import DataReference
 from azureml.core.compute import ComputeTarget, AmlCompute
 from azureml.pipeline.core import Pipeline, PipelineData, PipelineParameter
 from azureml.pipeline.steps import PythonScriptStep, EstimatorStep
-from azureml.widgets import RunDetails
 from azureml.train.estimator import Estimator
 import sys, getopt
 
