@@ -42,7 +42,7 @@ for opt, arg in opts:
     elif opt == '-a':
         accountname = arg
     elif opt == '-k':
-        accountname = arg
+        accountkey = arg
     elif opt == '-c':
         computetarget = arg
 
