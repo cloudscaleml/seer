@@ -17,8 +17,16 @@ def printhelp():
         print ('  -k    Storage Account Key')
         print ('  -c    Compute Target name')
 
+datastorename=''
+containername=''
+datastorepath=''
+accountname=''
+accountkey=''
+computetarget=''
+
 try:
-    opts, args = getopt.getopt(sys.argv,"d:dc:p:a:k:c:")
+    print 'ARGV: ',sys.argv[1:]
+    opts, args = getopt.getopt(sys.argv[1:],"d:dc:p:a:k:c:")
 except getopt.GetoptError:
     printhelp
 for opt, arg in opts:
@@ -37,6 +45,7 @@ for opt, arg in opts:
     elif opt == '-c':
         computetarget = arg
 
+print(opts)
 
 # Get environment variables
 #datastorename=os.environ['datastorename']
