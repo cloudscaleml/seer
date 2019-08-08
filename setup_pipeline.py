@@ -14,16 +14,15 @@ def printhelp():
         print ('  -n    Data Store Container name')
         print ('  -p    Data Store Path')
         print ('  -a    Storage Account name')
+        print ('  -k    Storage Account key')
         print ('  -c    Compute Target name')
-        print ('Note: you should also save the Storage Account key in an environment variable called ACCOUNT_KEY')
 
 datastorename=''
 containername=''
 datastorepath=''
 accountname=''
 computetarget=''
-accountkey=os.environ.get('ACCOUNT_KEY')
-print('Storage Account Key: ', accountkey)
+accountkey=''
 
 try:
     print('ARGV: ', sys.argv[1:])
@@ -41,6 +40,8 @@ for opt, arg in opts:
     elif opt == '-p':
         datastorepath = arg
     elif opt == '-a':
+        accountname = arg
+    elif opt == '-k':
         accountname = arg
     elif opt == '-c':
         computetarget = arg

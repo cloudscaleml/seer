@@ -27,11 +27,9 @@ steps:
 
 - task: AzureCLI@1
   displayName: 'Recreate and submit pipeline'
-  env:
-    ACCOUNT_KEY: $(accountkey)
   inputs:
     azureSubscription: 'ca-dabrady-demo-test (bc202ec2-54ef-4576-b7fb-a961c983398e)'
     scriptLocation: inlineScript
     inlineScript: |
       echo 'running python script:'
-      python $(Build.Repository.LocalPath)/setup_pipeline.py -d $(datastorename) -n $(containername) -p $(datastorepath) -a $(accountname) -c $(computetarget)
+      python $(Build.Repository.LocalPath)/setup_pipeline.py -d $(datastorename) -n $(containername) -p $(datastorepath) -a $(accountname) -k $(accountkey) -c $(computetarget)
