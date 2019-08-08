@@ -1,3 +1,4 @@
+from azureml.core import VERSION
 from azureml.core import Workspace, Experiment, Datastore
 from azureml.data.datapath import DataPath, DataPathComputeBinding
 from azureml.data.data_reference import DataReference
@@ -45,7 +46,7 @@ for opt, arg in opts:
 #accountkey=os.environ['storageaccountkey']
 #computetarget=os.environ['computetarget']
 
-print("Azure ML SDK Version: ", azureml.core.VERSION)
+print("Azure ML SDK Version: ", VERSION)
 
 # workspace
 ws = Workspace.from_config(
