@@ -62,15 +62,12 @@ ws = Workspace.from_config(
 print(ws.datastores)
 
 # data
-datastore = ws.datastores[datastorename]
-if datastore is None:
-    print ('Datastore not found, registering.')
-    datastore = Datastore.register_azure_blob_container(workspace=ws, 
-                                                datastore_name=datastorename, 
-                                                container_name=containername,
-                                                account_name=accountname, 
-                                                account_key=accountkey,
-                                                create_if_not_exists=False)
+datastore = Datastore.register_azure_blob_container(workspace=ws, 
+                                            datastore_name=datastorename, 
+                                            container_name=containername,
+                                            account_name=accountname, 
+                                            account_key=accountkey,
+                                            create_if_not_exists=False)
 
 
 # compute target
