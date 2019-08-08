@@ -25,8 +25,9 @@ accountkey=''
 computetarget=''
 
 try:
-    print('ARGV: ',sys.argv[1:])
+    print('ARGV: ', sys.argv[1:])
     opts, args = getopt.getopt(sys.argv[1:],"d:dc:p:a:k:c:")
+    print ('opts:', opts)
 except getopt.GetoptError:
     printhelp
 for opt, arg in opts:
@@ -44,8 +45,6 @@ for opt, arg in opts:
         accountkey = arg
     elif opt == '-c':
         computetarget = arg
-
-print(opts)
 
 # Get environment variables
 #datastorename=os.environ['datastorename']
