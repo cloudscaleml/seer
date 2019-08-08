@@ -11,7 +11,7 @@ import sys, getopt
 def printhelp():
         print ('Arguments:')
         print ('  -d    Data Store name')
-        print ('  -dc   Data Store Container name')
+        print ('  -n    Data Store Container name')
         print ('  -p    Data Store Path')
         print ('  -a    Storage Account name')
         print ('  -k    Storage Account Key')
@@ -26,7 +26,7 @@ computetarget=''
 
 try:
     print('ARGV: ', sys.argv[1:])
-    opts, args = getopt.getopt(sys.argv[1:],"d:dc:p:a:k:c:")
+    opts, args = getopt.getopt(sys.argv[1:],"d:n:p:a:k:c:")
     print ('opts:', opts)
 except getopt.GetoptError:
     printhelp
@@ -35,7 +35,7 @@ for opt, arg in opts:
         printhelp
     elif opt == '-d':
         datastorename = arg
-    elif opt == '-dc':
+    elif opt == '-n':
         containername = arg
     elif opt == '-p':
         datastorepath = arg
