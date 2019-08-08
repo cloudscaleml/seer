@@ -87,7 +87,7 @@ compute = ws.compute_targets[computetarget]
 # ## Pipeline Parameters
 # We need to tell the Pipeline what it needs to learn to see!
 
-datapath = DataPath(datastore=datastorepath, path_on_datastore='hardware')
+datapath = DataPath(datastore=datastorename, path_on_datastore=datastorepath)
 data_path_pipeline_param = (PipelineParameter(name="data", 
                                             default_value=datapath), 
                                             DataPathComputeBinding(mode='mount'))
