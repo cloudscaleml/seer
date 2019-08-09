@@ -8,6 +8,7 @@ from azureml.pipeline.steps import PythonScriptStep, EstimatorStep
 from azureml.train.estimator import Estimator
 import sys, getopt, os
 
+## Get arguments
 def printhelp():
         print ('Arguments:')
         print ('  -d    Data Store name')
@@ -19,9 +20,8 @@ datastorepath=''
 computetarget=''
 
 try:
-    print('ARGV: ', sys.argv[1:])
+    print('Arguments: ', sys.argv[1:])
     opts, args = getopt.getopt(sys.argv[1:],"d:p:c:")
-    print ('opts:', opts)
 except getopt.GetoptError:
     printhelp
 for opt, arg in opts:
@@ -36,6 +36,9 @@ for opt, arg in opts:
 
 print("Azure ML SDK Version: ", VERSION)
 
+#### Connect to our workspace ####
+##################################
+
 # workspace
 ws = Workspace.from_config(
     path='./azureml-config.json')
@@ -47,16 +50,20 @@ datastore = ws.datastores[datastorename]
 # compute target
 compute = ws.compute_targets[computetarget]
 
-# # Define Pipeline!
+
+#### Define Pipeline! ####
+##########################
+
 # The following will be created and then run:
 # 1. Pipeline Parameters
-# 2. Data Fetch Step
-# 3. Data Process Step
+# 2. Data Process Step
+# 3. Training Step
 # 4. Model Registration Step
-# 5. Training Step
-# 
+# 5. Pipeline registration
+# 6. Submit the pipeline for execution
 
-# ## Pipeline Parameters
+
+## Pipeline Parameters ##
 # We need to tell the Pipeline what it needs to learn to see!
 
 datapath = DataPath(datastore=datastore, path_on_datastore=datastorepath)
@@ -66,7 +73,8 @@ data_path_pipeline_param = (PipelineParameter(name="data",
 data_path_pipeline_param
 
 
-# ## Data Process Step
+## Data Process Step ##
+# parse.py file parses the images in our data source
 
 seer_tfrecords = PipelineData(
     "tfrecords_set",
@@ -90,7 +98,9 @@ prepStep = EstimatorStep(
     compute_target=compute
 )
 
-# ## Training Step
+
+## Training Step
+# train.py does the training based on the processed data
 
 seer_training = PipelineData(
     "train",
@@ -117,7 +127,9 @@ trainStep = EstimatorStep(
     compute_target=compute
 )
 
-# # Register Model Step
+
+## Register Model Step ##
+# Once training is complete, register.py registers the model with AML
 
 seer_model = PipelineData(
     "model",
@@ -140,7 +152,9 @@ registerStep = EstimatorStep(
     compute_target=compute
 )
 
-# ## Create and publish the Pipeline
+
+## Create and publish the Pipeline ##
+# We now define and publish the pipeline
 
 pipeline = Pipeline(workspace=ws, steps=[prepStep, trainStep, registerStep])
 
@@ -148,9 +162,9 @@ published_pipeline = pipeline.publish(
     name="Seer Pipeline", 
     description="Transfer learned image classifier. Uses folders as labels.")
 
-# Submit the pipeline to be run
-pipeline_run = Experiment(ws, 'seer').submit(pipeline)
-#RunDetails(pipeline_run).show()
 
+## Submit the pipeline to be run ##
+# Finally, we submit the pipeline for execution
+
+pipeline_run = Experiment(ws, 'seer').submit(pipeline)
 print('Run created with ID: ', pipeline_run.id)
-print('URL in Azure Portal: ', pipeline_run.PORTAL_URL)
