@@ -11,22 +11,16 @@ import sys, getopt, os
 def printhelp():
         print ('Arguments:')
         print ('  -d    Data Store name')
-        print ('  -n    Data Store Container name')
         print ('  -p    Data Store Path')
-        print ('  -a    Storage Account name')
-        print ('  -k    Storage Account key')
         print ('  -c    Compute Target name')
 
 datastorename=''
-containername=''
 datastorepath=''
-accountname=''
 computetarget=''
-accountkey=''
 
 try:
     print('ARGV: ', sys.argv[1:])
-    opts, args = getopt.getopt(sys.argv[1:],"d:n:p:a:k:c:")
+    opts, args = getopt.getopt(sys.argv[1:],"d:p:c:")
     print ('opts:', opts)
 except getopt.GetoptError:
     printhelp
@@ -35,24 +29,10 @@ for opt, arg in opts:
         printhelp
     elif opt == '-d':
         datastorename = arg
-    elif opt == '-n':
-        containername = arg
     elif opt == '-p':
         datastorepath = arg
-    elif opt == '-a':
-        accountname = arg
-    elif opt == '-k':
-        accountkey = arg
     elif opt == '-c':
         computetarget = arg
-
-# Get environment variables
-#datastorename=os.environ['datastorename']
-#containername=os.environ['containername']
-#datastorepath=os.environ['datapath']
-#accountname=os.environ['accountname']
-#accountkey=os.environ['storageaccountkey']
-#computetarget=os.environ['computetarget']
 
 print("Azure ML SDK Version: ", VERSION)
 
@@ -62,13 +42,7 @@ ws = Workspace.from_config(
 print(ws.datastores)
 
 # data
-datastore = Datastore.register_azure_blob_container(workspace=ws, 
-                                            datastore_name=datastorename, 
-                                            container_name=containername,
-                                            account_name=accountname, 
-                                            account_key=accountkey,
-                                            create_if_not_exists=False)
-
+datastore = ws.datastores[datastorename]
 
 # compute target
 compute = ws.compute_targets[computetarget]

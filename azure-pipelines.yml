@@ -32,4 +32,4 @@ steps:
     scriptLocation: inlineScript
     inlineScript: |
       echo 'running python script:'
-      python $(Build.Repository.LocalPath)/setup_pipeline.py -d $(datastorename) -n $(containername) -p $(datastorepath) -a $(accountname) -k $(accountkey) -c $(computetarget)
+      python $(Build.Repository.LocalPath)/setup_pipeline.py -d $(datastorename) -p $(datastorepath) -c $(computetarget)
