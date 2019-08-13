@@ -49,6 +49,7 @@ steps:
     command: 'publish'
     publishDirectory: '$(Build.ArtifactStagingDirectory)'
     feedsToUsePublish: 'internal'
+    vstsFeedPackagePublish: 'SeerDeployment'
     vstsFeedPublish: '1261cb14-65de-4b24-8b30-2fffb1332785'
     versionOption: 'custom'
     versionPublish: '$(Build.BuildNumber)'
