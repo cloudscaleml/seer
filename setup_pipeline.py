@@ -14,14 +14,16 @@ def printhelp():
         print ('  -d    Data Store name')
         print ('  -p    Data Store Path')
         print ('  -c    Compute Target name')
+        print ('  -v    Universal Package version (for deployment and inferencing code)')
 
 datastorename=''
 datastorepath=''
 computetarget=''
+packageversion=''
 
 try:
     print('Arguments: ', sys.argv[1:])
-    opts, args = getopt.getopt(sys.argv[1:],"d:p:c:")
+    opts, args = getopt.getopt(sys.argv[1:],"d:p:c:v:")
 except getopt.GetoptError:
     printhelp
 for opt, arg in opts:
@@ -33,6 +35,8 @@ for opt, arg in opts:
         datastorepath = arg
     elif opt == '-c':
         computetarget = arg
+    elif opt == '-v':
+        packageversion = arg
 
 print("Azure ML SDK Version: ", VERSION)
 
@@ -166,5 +170,5 @@ published_pipeline = pipeline.publish(
 ## Submit the pipeline to be run ##
 # Finally, we submit the pipeline for execution
 
-pipeline_run = Experiment(ws, 'seer').submit(pipeline)
+pipeline_run = Experiment(ws, 'seer',).submit(pipeline, tags={'universalPackageVersion': packageversion})
 print('Run created with ID: ', pipeline_run.id)
