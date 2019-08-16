@@ -14,7 +14,7 @@ def info(msg, char = "#", width = 75):
     print(char + "   %0*s" % ((-1*width)+5, msg) + char)
     print(char * width)
 
-def best_model(source_path, universal_ver):
+def best_model(source_path, universal_package_version):
     best_model = None
     maxsum = -1
     for file in Path(source_path).glob('*.hdf5'):
@@ -29,14 +29,14 @@ def best_model(source_path, universal_ver):
                 'train': ps[0],
                 'val': ps[1],
                 'sum': ps[0] + ps[1],
-                'uver': universal_ver
+                'uver': universal_package_version
             }
             maxsum = sm
             
     return best_model
     
 
-def main(run, source_path, target_path, universal_ver):
+def main(run, source_path, target_path, universal_package_version):
 
     metadata_file = 'metadata.json'
     model_file = 'model.hdf5'
@@ -44,7 +44,7 @@ def main(run, source_path, target_path, universal_ver):
         os.makedirs(target_path)
 
     info('Model')
-    model = best_model(source_path, universal_ver)
+    model = best_model(source_path, universal_package_version)
     print('Best model found:')
     for i in model:
         print('   {} => {}'.format(i, model[i]))
