@@ -14,7 +14,7 @@ def info(msg, char = "#", width = 75):
     print(char + "   %0*s" % ((-1*width)+5, msg) + char)
     print(char * width)
 
-def best_model(source_path):
+def best_model(source_path, universal_ver):
     best_model = None
     maxsum = -1
     for file in Path(source_path).glob('*.hdf5'):
@@ -28,14 +28,15 @@ def best_model(source_path):
             best_model = {'file': file,
                 'train': ps[0],
                 'val': ps[1],
-                'sum': ps[0] + ps[1]
+                'sum': ps[0] + ps[1],
+                'uver': universal_ver
             }
             maxsum = sm
             
     return best_model
     
 
-def main(run, source_path, target_path):
+def main(run, source_path, target_path, universal_ver):
 
     metadata_file = 'metadata.json'
     model_file = 'model.hdf5'
@@ -43,7 +44,7 @@ def main(run, source_path, target_path):
         os.makedirs(target_path)
 
     info('Model')
-    model = best_model(source_path)
+    model = best_model(source_path, universal_ver)
     print('Best model found:')
     for i in model:
         print('   {} => {}'.format(i, model[i]))
@@ -71,6 +72,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Model Registration Process')
     parser.add_argument('-s', '--source_path', help='directory to generated models', default='data/train')
     parser.add_argument('-t', '--target_path', help='write directory', default='data/model')
+    parser.add_argument('-v', '--universal_package_version', help='the universal packages version containing inference and deployment details', default='1.0.0')
     args = parser.parse_args()
 
     run = Run.get_context()

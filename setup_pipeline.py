@@ -150,7 +150,8 @@ registerStep = EstimatorStep(
     name='Model Registration',
     estimator=register,
     estimator_entry_script_arguments=["--source_path", seer_training, 
-                                    "--target_path", seer_model],
+                                      "--target_path", seer_model,
+                                      "--universal_package_version", packageversion],
     inputs=[seer_training],
     outputs=[seer_model],
     compute_target=compute
