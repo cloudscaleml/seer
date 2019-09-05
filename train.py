@@ -27,7 +27,7 @@ def info(msg, char = "#", width = 75):
     print(char + "   %0*s" % ((-1*width)+5, msg) + char)
     print(char * width)
 
-def split(records, split=[8, 2]):
+def split(records, split=[7, 3]):
     # normalize splits
     splits = np.array(split) / np.sum(np.array(split))
     # split data
@@ -85,15 +85,15 @@ def main(run, source_path, target_path, epochs, batch, lr):
 
     # model
     info('Creating Model')
-    #base_model = tf.keras.applications.MobileNetV2(input_shape=img_shape,
-    #                                           include_top=False, 
-    #                                           weights='imagenet',
-    #                                           pooling='avg')
-
-    base_model = tf.keras.applications.VGG19(input_shape=img_shape,
+    base_model = tf.keras.applications.MobileNetV2(input_shape=img_shape,
                                                include_top=False, 
                                                weights='imagenet',
                                                pooling='avg')
+
+    #base_model = tf.keras.applications.VGG19(input_shape=img_shape,
+    #                                           include_top=False, 
+    #                                           weights='imagenet',
+    #                                           pooling='avg')
 
     #base_model = tf.keras.applications.ResNet50(input_shape=img_shape,
     #                                           include_top=False, 
