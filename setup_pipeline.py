@@ -163,9 +163,8 @@ published_pipeline = pipeline.publish(
     name="Seer Pipeline", 
     description="Transfer learned image classifier. Uses folders as labels.")
 
-
 ## Submit the pipeline to be run ##
 # Finally, we submit the pipeline for execution
 
-pipeline_run = Experiment(ws, 'seer',).submit(pipeline, tags={'universalPackageVersion': packageversion})
+pipeline_run = Experiment(ws, 'seer',).submit(published_pipeline, tags={'universalPackageVersion': packageversion})
 print('Run created with ID: ', pipeline_run.id)
