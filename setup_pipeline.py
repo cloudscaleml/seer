@@ -1,5 +1,6 @@
 from azureml.core import VERSION
-from azureml.core import Workspace, Experiment, Datastore
+from azureml.core import Workspace, Experiment, Datastore, Environment
+from azureml.core.runconfig import RunConfiguration
 from azureml.data.datapath import DataPath, DataPathComputeBinding
 from azureml.data.data_reference import DataReference
 from azureml.core.compute import ComputeTarget, AmlCompute
@@ -74,8 +75,13 @@ datapath = DataPath(datastore=datastore, path_on_datastore=datastorepath)
 data_path_pipeline_param = (PipelineParameter(name="data", 
                                             default_value=datapath), 
                                             DataPathComputeBinding(mode='mount'))
-data_path_pipeline_param
 
+## Run configuration for non-estimator steps ##
+cpuEnvironment = Environment(name="dataprepenv")
+cpuEnvironment.from_pip_requirements('dataprepreq', 'requirements.txt')
+
+cpuRunConfig = RunConfiguration()
+cpuRunConfig.environment = cpuEnvironment
 
 ## Data Process Step ##
 # parse.py file parses the images in our data source
@@ -86,22 +92,16 @@ seer_tfrecords = PipelineData(
     is_directory=True
 )
 
-prep = Estimator(source_directory='.',
-                    compute_target=compute,
-                    entry_script='parse.py',
-                    use_gpu=True,
-                    pip_requirements_file='requirements.txt')
-
-prepStep = EstimatorStep(
+prepStep = PythonScriptStep(
+    'parse.py',
+    source_directory='.',
     name='Data Preparation',
-    estimator=prep,
-    estimator_entry_script_arguments=["--source_path", data_path_pipeline_param, 
-                                    "--target_path", seer_tfrecords],
+    compute_target=compute,
+    arguments=["--source_path", data_path_pipeline_param, "--target_path", seer_tfrecords],
+    runconfig=cpuRunConfig,
     inputs=[data_path_pipeline_param],
-    outputs=[seer_tfrecords],
-    compute_target=compute
+    outputs=[seer_tfrecords]
 )
-
 
 ## Training Step
 # train.py does the training based on the processed data
@@ -123,8 +123,8 @@ trainStep = EstimatorStep(
     estimator=train,
     estimator_entry_script_arguments=["--source_path", seer_tfrecords, 
                                     "--target_path", seer_training,
-                                    "--epochs", 10,
-                                    "--batch", 20,
+                                    "--epochs", 5,
+                                    "--batch", 10,
                                     "--lr", 0.001],
     inputs=[seer_tfrecords],
     outputs=[seer_training],
@@ -141,22 +141,18 @@ seer_model = PipelineData(
     is_directory=True
 )
 
-register = Estimator(source_directory='.',
-                    compute_target=compute,
-                    entry_script='register.py',
-                    use_gpu=True)
-
-registerStep = EstimatorStep(
+registerStep = PythonScriptStep(
+    'register.py',
+    source_directory='.',
     name='Model Registration',
-    estimator=register,
-    estimator_entry_script_arguments=["--source_path", seer_training, 
-                                      "--target_path", seer_model,
-                                      "--universal_package_version", packageversion],
+    arguments=["--source_path", seer_training, 
+               "--target_path", seer_model,
+               "--universal_package_version", packageversion],
     inputs=[seer_training],
     outputs=[seer_model],
-    compute_target=compute
+    compute_target=compute,
+    runconfig=cpuRunConfig
 )
-
 
 ## Create and publish the Pipeline ##
 # We now define and publish the pipeline
