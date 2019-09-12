@@ -113,7 +113,6 @@ seer_training = PipelineData(
 train = Estimator(source_directory='.',
                     compute_target=compute,
                     entry_script='train.py',
-                    use_gpu=True,
                     pip_requirements_file='requirements-dataprepandtraining.txt')
 
 trainStep = EstimatorStep(
