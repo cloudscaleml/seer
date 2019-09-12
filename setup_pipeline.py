@@ -77,8 +77,7 @@ data_path_pipeline_param = (PipelineParameter(name="data",
                                             DataPathComputeBinding(mode='mount'))
 
 ## Run configuration for non-estimator steps ##
-cpuEnvironment = Environment(name="dataprepenv")
-cpuEnvironment.from_pip_requirements('dataprepreq', 'requirements.txt')
+cpuEnvironment = Environment.from_pip_requirements('dataprepenv', 'requirements.txt')
 
 cpuRunConfig = RunConfiguration()
 cpuRunConfig.environment = cpuEnvironment
@@ -123,8 +122,8 @@ trainStep = EstimatorStep(
     estimator=train,
     estimator_entry_script_arguments=["--source_path", seer_tfrecords, 
                                     "--target_path", seer_training,
-                                    "--epochs", 5,
-                                    "--batch", 10,
+                                    "--epochs", 10,
+                                    "--batch", 20,
                                     "--lr", 0.001],
     inputs=[seer_tfrecords],
     outputs=[seer_training],
