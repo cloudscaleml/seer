@@ -76,11 +76,10 @@ data_path_pipeline_param = (PipelineParameter(name="data",
                                             default_value=datapath), 
                                             DataPathComputeBinding(mode='mount'))
 
-## Run configuration for non-estimator steps ##
-cpuEnvironment = Environment.from_pip_requirements('dataprepenv', 'requirements.txt')
-
-cpuRunConfig = RunConfiguration()
-cpuRunConfig.environment = cpuEnvironment
+## Run configuration for data prep step ##
+dataprepEnvironment = Environment.from_pip_requirements('dataprepenv', 'requirements-dataprepandtraining.txt')
+dataprepRunConfig = RunConfiguration()
+dataprepRunConfig.environment = dataprepEnvironment
 
 ## Data Process Step ##
 # parse.py file parses the images in our data source
@@ -97,7 +96,7 @@ prepStep = PythonScriptStep(
     name='Data Preparation',
     compute_target=compute,
     arguments=["--source_path", data_path_pipeline_param, "--target_path", seer_tfrecords],
-    runconfig=cpuRunConfig,
+    runconfig=dataprepRunConfig,
     inputs=[data_path_pipeline_param],
     outputs=[seer_tfrecords]
 )
@@ -115,7 +114,7 @@ train = Estimator(source_directory='.',
                     compute_target=compute,
                     entry_script='train.py',
                     use_gpu=True,
-                    pip_requirements_file='requirements.txt')
+                    pip_requirements_file='requirements-dataprepandtraining.txt')
 
 trainStep = EstimatorStep(
     name='Model Training',
@@ -134,6 +133,11 @@ trainStep = EstimatorStep(
 ## Register Model Step ##
 # Once training is complete, register.py registers the model with AML
 
+# Run configuration for data prep step #
+registerEnvironment = Environment.from_pip_requirements('registerenv', 'requirements-registration.txt')
+registerRunConfig = RunConfiguration()
+registerRunConfig.environment = registerEnvironment
+
 seer_model = PipelineData(
     "model",
     datastore=datastore,
@@ -150,7 +154,7 @@ registerStep = PythonScriptStep(
     inputs=[seer_training],
     outputs=[seer_model],
     compute_target=compute,
-    runconfig=cpuRunConfig
+    runconfig=registerRunConfig
 )
 
 ## Create and publish the Pipeline ##
