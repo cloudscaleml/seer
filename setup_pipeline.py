@@ -76,13 +76,14 @@ data_path_pipeline_param = (PipelineParameter(name="data",
                                             default_value=datapath), 
                                             DataPathComputeBinding(mode='mount'))
 
-## Run configuration for data prep step ##
+# Configuration for data prep and training steps #
+
 dataprepEnvironment = Environment.from_pip_requirements('dataprepenv', 'requirements-dataprepandtraining.txt')
 dataprepRunConfig = RunConfiguration()
 dataprepRunConfig.environment = dataprepEnvironment
 
 ## Data Process Step ##
-# parse.py file parses the images in our data source
+# parse.py file parses the images in our data source #
 
 seer_tfrecords = PipelineData(
     "tfrecords_set",
@@ -101,8 +102,8 @@ prepStep = PythonScriptStep(
     outputs=[seer_tfrecords]
 )
 
-## Training Step
-# train.py does the training based on the processed data
+## Training Step ##
+# train.py does the training based on the processed data #
 
 seer_training = PipelineData(
     "train",
@@ -121,7 +122,7 @@ trainStep = EstimatorStep(
     estimator_entry_script_arguments=["--source_path", seer_tfrecords, 
                                     "--target_path", seer_training,
                                     "--epochs", 10,
-                                    "--batch", 20,
+                                    "--batch", 10,
                                     "--lr", 0.001],
     inputs=[seer_tfrecords],
     outputs=[seer_training],
@@ -130,9 +131,9 @@ trainStep = EstimatorStep(
 
 
 ## Register Model Step ##
-# Once training is complete, register.py registers the model with AML
+# Once training is complete, register.py registers the model with AML #
 
-# Run configuration for data prep step #
+# Configuration for registration step #
 registerEnvironment = Environment.from_pip_requirements('registerenv', 'requirements-registration.txt')
 registerRunConfig = RunConfiguration()
 registerRunConfig.environment = registerEnvironment
@@ -157,7 +158,7 @@ registerStep = PythonScriptStep(
 )
 
 ## Create and publish the Pipeline ##
-# We now define and publish the pipeline
+# We now define and publish the pipeline #
 
 pipeline = Pipeline(workspace=ws, steps=[prepStep, trainStep, registerStep])
 
@@ -166,7 +167,7 @@ published_pipeline = pipeline.publish(
     description="Transfer learned image classifier. Uses folders as labels.")
 
 ## Submit the pipeline to be run ##
-# Finally, we submit the pipeline for execution
+# Finally, we submit the pipeline for execution #
 
 pipeline_run = Experiment(ws, 'seer',).submit(published_pipeline, tags={'universalPackageVersion': packageversion})
 print('Run created with ID: ', pipeline_run.id)
