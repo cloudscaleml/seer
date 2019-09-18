@@ -121,7 +121,7 @@ trainStep = EstimatorStep(
     estimator=train,
     estimator_entry_script_arguments=["--source_path", seer_tfrecords, 
                                     "--target_path", seer_training,
-                                    "--epochs", 10,
+                                    "--epochs", 20,
                                     "--batch", 10,
                                     "--lr", 0.001],
     inputs=[seer_tfrecords],
