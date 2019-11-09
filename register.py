@@ -25,7 +25,8 @@ def best_model(source_path):
         sm = ps[0] + ps[1]
         # look at train/val acc combo
         if sm > maxsum:
-            best_model = {'file': file,
+            best_model = {
+                'file': file,
                 'train': ps[0],
                 'val': ps[1],
                 'sum': ps[0] + ps[1]
