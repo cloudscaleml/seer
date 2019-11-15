@@ -1,0 +1,76 @@
+# CI to recreate and submit an AML pipeline when the code changes
+variables:
+  - group: seer-build
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+name: 1.$(BuildID)$(Rev:.r)
+
+steps:
+- task: UsePythonVersion@0
+  displayName: 'Use Python 3.6'
+  inputs:
+    versionSpec: '3.6'
+
+- task: AzureCLI@1
+  displayName: 'Install Azure ML CLI Extension'
+  inputs:
+    azureSubscription: $(subscription)
+    scriptLocation: inlineScript
+    inlineScript: 'az extension add -n azure-cli-ml'
+
+- script: 'pip install --upgrade azureml-sdk'
+  displayName: 'Install AzureML'
+
+- task: AzureCLI@1
+  displayName: 'Recreate and submit pipeline'
+  inputs:
+    azureSubscription: $(subscription)
+    scriptLocation: inlineScript
+    inlineScript: |
+      subscription_id=$(az account show --query id -o tsv)
+      azure_storage_account="haldatasets"
+      workspace="hal"
+      azure_storage_key=$(az storage account keys list --account-name $azure_storage_account --resource-group $(resource_group) --query '[].value | [0]' -o tsv )
+      echo 'running python script:'
+      python pipeline.py \ 
+        --datastore_name $(datastorename) \
+        --datastore_path $(datastorepath) \
+        --compute_target $(computetarget) \
+        --universal_package $(Build.BuildNumber) \
+        --subscription $subscription_id \
+        --storage_account $azure_storage_account \
+        --storage_key $azure_storage_key \
+        --resource_group $(resource_group) \
+        --workspace $workspace
+- task: CopyFiles@2
+  displayName: 'Copy inference and deployment files'
+  inputs:
+    SourceFolder: '$(Build.Repository.LocalPath)'
+    Contents: |
+      deploymentconfig.json
+      inferenceconfig.json
+      score.py
+      seer_scoring.yml
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: AzureCLI@1
+  displayName: 'Publish package'
+  env:
+    AZURE_DEVOPS_EXT_PAT: $(access_token)
+  inputs:
+    azureSubscription: $(subscription)
+    scriptLocation: inlineScript
+    inlineScript: |
+      az extension add -n azure-devops
+      az artifacts universal publish \
+        --organization "https://dev.azure.com/$(org_name)/" \
+        --feed "SeerPackages" \
+        --name "seer_deployment" \
+        --version "$(Build.BuildNumber)" \
+        --description "Seer inference files" \
+        --path .
