@@ -94,7 +94,7 @@ def train_step(datastore: Datastore, input_data: PipelineData, compute: ComputeT
 
     return seer_training, trainStep
 
-def register_step(datastore: Datastore, input_data: PipelineData, compute: ComputeTarget) -> (PipelineData, EstimatorStep):
+def register_step(datastore: Datastore, input_data: PipelineData, compute: ComputeTarget, package_version: str) -> (PipelineData, EstimatorStep):
     seer_model = PipelineData(
         "model",
         datastore=datastore,
@@ -109,7 +109,8 @@ def register_step(datastore: Datastore, input_data: PipelineData, compute: Compu
         name='Model Registration',
         estimator=register,
         estimator_entry_script_arguments=["--source_path", input_data, 
-                                          "--target_path", seer_model],
+                                          "--target_path", seer_model,
+                                          "--universal_package_version", package_version],
         inputs=[input_data],
         outputs=[seer_model],
         compute_target=compute
@@ -164,8 +165,8 @@ if __name__ == "__main__":
     # train step
     tdata, tstep = train_step(datastore, pdata, compute)
 
-    # register step
-    rdata, rstep = register_step(datastore, tdata, compute)
+    # register step (tag model with version)
+    rdata, rstep = register_step(datastore, tdata, compute, args.universal_package)
 
     # create pipeline from steps
     seer_pipeline = Pipeline(workspace=ws, steps=[pstep, tstep, rstep])

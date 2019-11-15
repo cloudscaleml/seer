@@ -36,7 +36,7 @@ def best_model(source_path):
     return best_model
     
 
-def main(run, source_path, target_path):
+def main(run, source_path, target_path, universal_package_version):
 
     metadata_file = 'metadata.json'
     model_file = 'model.hdf5'
@@ -61,6 +61,8 @@ def main(run, source_path, target_path):
     # not offline - we can register in AML
     if not run.id.lower().startswith('offlinerun'):
         info('Register')
+        # for tagging build number associated with build
+        model['uver'] = universal_package_version
         model['file'] = original_file
         m = Model.register(run.experiment.workspace, model_name='seer', model_path=target_path, tags=model)
         print(m)
@@ -72,6 +74,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Model Registration Process')
     parser.add_argument('-s', '--source_path', help='directory to generated models', default='data/train')
     parser.add_argument('-t', '--target_path', help='write directory', default='data/model')
+    parser.add_argument('-v', '--universal_package_version', help='the universal packages version containing inference and deployment details', default='1.0.0')
     args = parser.parse_args()
 
     run = Run.get_context()
