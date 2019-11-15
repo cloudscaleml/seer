@@ -9,3 +9,4 @@ outputs/
 Untitled.ipynb
 *.tfrecords
 *.log
+run.cmd

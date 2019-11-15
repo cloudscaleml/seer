@@ -50,6 +50,9 @@ def parse_record(example_proto):
 
 def main(run, source_path, target_path, epochs, batch, lr):
     info('Preprocess')
+    print(f'Using Tensorflow v.{tf.__version__}')
+    print(f'GPUs Available: {len(tf.config.experimental.list_physical_devices("GPU"))}')
+
     if not os.path.exists(target_path):
         os.makedirs(target_path)
 

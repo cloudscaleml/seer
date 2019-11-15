@@ -3,7 +3,7 @@ from azureml.core import Workspace, Experiment, Datastore
 from azureml.data.datapath import DataPath, DataPathComputeBinding
 from azureml.data.data_reference import DataReference
 from azureml.core.compute import ComputeTarget, AmlCompute
-from azureml.pipeline.core import Pipeline, PipelineData, PipelineParameter
+from azureml.pipeline.core import Pipeline, PipelineData, PipelineParameter, PublishedPipeline, PipelineEndpoint
 from azureml.pipeline.steps import PythonScriptStep, EstimatorStep
 from azureml.widgets import RunDetails
 from azureml.train.estimator import Estimator
@@ -118,6 +118,24 @@ def register_step(datastore: Datastore, input_data: PipelineData, compute: Compu
 
     return seer_model, registerStep
 
+##############################################################
+#    Manage Endpoint                                         #
+##############################################################
+def add_endpoint(ws: Workspace, pipeline: PublishedPipeline, endpoint_name: str) -> PipelineEndpoint:
+    endpoint_list = [p.name for p in PipelineEndpoint.list(ws)]
+    endpoint = None
+    # endpoint does not exist so add
+    if endpoint_name in endpoint_list:
+        endpoint = PipelineEndpoint.get(workspace=ws, name=endpoint_name)
+        endpoint.add_default(published_pipeline)
+    else:
+        endpoint = PipelineEndpoint.publish(workspace=ws, name=endpoint_name,
+                                                pipeline=published_pipeline, description="Seer Pipeline Endpoint")
+    return endpoint
+
+##############################################################
+#    Main Run                                                #
+##############################################################
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Seer Pipeline')
     parser.add_argument('-d', '--datastore_name', help='Data Store name')
@@ -150,10 +168,16 @@ if __name__ == "__main__":
     # register step
     rdata, rstep = register_step(datastore, tdata, compute)
 
-    # put it all together
+    # create pipeline from steps
     seer_pipeline = Pipeline(workspace=ws, steps=[pstep, tstep, rstep])
-    seer_run = Experiment(ws, 'seer').submit(seer_pipeline)
-    published_pipeline1 = seer_pipeline.publish(
-        name="Food Pipeline", 
+    published_pipeline = seer_pipeline.publish(name="Seer Pipeline", 
         description="Transfer learned image classifier. Uses folders as labels.")
+
+    # add pipeline to endpoint
+    endpoint = add_endpoint(ws, published_pipeline, 'seer-endpoint')
+
+    # run pipeline
+    pipeline_run = endpoint.submit('seer')                               
+    pipeline_run.set_tags(tags={'universalPackageVersion': args.universal_package})
+    print(f'Run created with ID: {pipeline_run.id}')
 

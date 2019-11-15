@@ -1,4 +1,6 @@
-python prep.py -s data/food -t data/parse
-python train.py -s data/parse -t data/train --epochs 10 --batch 32 --lr 0.0001
-python register.py -s data/train -t data/model
-az ml service update --name seer-svc --inference-config inferenceconfig.json --deploy-config-file deployconfig.json
+rm -r data\prep
+rm -r data\train
+rm -r data\model
+python prep.py -s data\food -t data\prep
+python train.py -s data\prep -t data\train --epochs 10 --batch 32 --lr 0.0001
+python register.py -s data\train -t data\model

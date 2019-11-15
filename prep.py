@@ -57,6 +57,10 @@ def main(source_path, target_path, records, image_size, force):
     raw_path = Path(source_path)
 
     categories = sorted([str(p.relative_to(source_path)) for p in list(raw_path.glob('*/'))])
+
+    if len(categories) == 0:
+        raise Exception('There is no visible data to parse!')
+
     index = dict((name, index) for index, name in enumerate(categories))
 
 
