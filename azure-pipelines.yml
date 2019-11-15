@@ -64,4 +64,4 @@ steps:
         --name "seer_deployment" \
         --version "$(Build.BuildNumber)" \
         --description "Seer inference files" \
-        --path .
+        --path $(Build.ArtifactStagingDirectory)
