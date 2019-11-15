@@ -33,8 +33,6 @@ steps:
     scriptLocation: inlineScript
     inlineScript: |
       subscription_id=$(az account show --query id -o tsv)
-      azure_storage_account="haldatasets"
-      workspace="hal"
       azure_storage_key=$(az storage account keys list --account-name $azure_storage_account --resource-group $(resource_group) --query '[].value | [0]' -o tsv )
       echo 'running python script:'
       python pipeline.py \ 
@@ -43,10 +41,10 @@ steps:
         --compute_target $(computetarget) \
         --universal_package $(Build.BuildNumber) \
         --subscription $subscription_id \
-        --storage_account $azure_storage_account \
+        --storage_account $(storage_account) \
         --storage_key $azure_storage_key \
         --resource_group $(resource_group) \
-        --workspace $workspace
+        --workspace $(workspace)
 - task: CopyFiles@2
   displayName: 'Copy inference and deployment files'
   inputs:
