@@ -1,6 +1,6 @@
 # CI to recreate and submit an AML pipeline when the code changes
 variables:
-  - group: seer-build
+  - group: seerws
 
 trigger:
 - master
