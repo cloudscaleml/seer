@@ -33,7 +33,7 @@ steps:
     scriptLocation: inlineScript
     inlineScript: |
       subscription_id=$(az account show --query id -o tsv)
-      azure_storage_key=$(az storage account keys list --account-name $azure_storage_account --resource-group $(resource_group) --query '[].value | [0]' -o tsv )
+      azure_storage_key=$(az storage account keys list --account-name $(storage_account) --resource-group $(resource_group) --query '[].value | [0]' -o tsv )
       echo 'running python script:'
       python pipeline.py \ 
         --datastore_name $(datastorename) \
@@ -58,8 +58,8 @@ steps:
 
 - task: AzureCLI@1
   displayName: 'Publish package'
-  env:
-    AZURE_DEVOPS_EXT_PAT: $(access_token)
+  #env:
+  #  AZURE_DEVOPS_EXT_PAT: $(access_token)
   inputs:
     azureSubscription: $(subscription)
     scriptLocation: inlineScript
@@ -67,6 +67,8 @@ steps:
       az extension add -n azure-devops
       az artifacts universal publish \
         --organization "https://dev.azure.com/$(org_name)/" \
+        --project="seer" \
+        --scope project \
         --feed "SeerInference" \
         --name "seer_deployment" \
         --version "$(Build.BuildNumber)" \
