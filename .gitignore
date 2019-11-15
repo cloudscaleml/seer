@@ -10,3 +10,4 @@ Untitled.ipynb
 *.tfrecords
 *.log
 run.cmd
+.vscode
