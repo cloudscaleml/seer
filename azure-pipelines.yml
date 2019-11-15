@@ -49,8 +49,8 @@ steps:
 
 - task: AzureCLI@1
   displayName: 'Publish package'
-  #env:
-  #  AZURE_DEVOPS_EXT_PAT: $(access_token)
+  env:
+    AZURE_DEVOPS_EXT_PAT: $(access_token)
   inputs:
     azureSubscription: $(subscription)
     scriptLocation: inlineScript
