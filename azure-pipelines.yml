@@ -41,7 +41,7 @@ steps:
   inputs:
     SourceFolder: '$(Build.Repository.LocalPath)'
     Contents: |
-      deploymentconfig.json
+      deployconfig.json
       inferenceconfig.json
       score.py
       seer_scoring.yml
