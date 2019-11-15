@@ -67,7 +67,7 @@ steps:
       az extension add -n azure-devops
       az artifacts universal publish \
         --organization "https://dev.azure.com/$(org_name)/" \
-        --feed "SeerPackages" \
+        --feed "SeerInference" \
         --name "seer_deployment" \
         --version "$(Build.BuildNumber)" \
         --description "Seer inference files" \
