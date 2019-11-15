@@ -36,15 +36,15 @@ steps:
       azure_storage_key=$(az storage account keys list --account-name $(storage_account) --resource-group $(resource_group) --query '[].value | [0]' -o tsv )
       echo 'running python script:'
       python pipeline.py \ 
-        --datastore_name $(datastorename) \
-        --datastore_path $(datastorepath) \
-        --compute_target $(computetarget) \
-        --universal_package $(Build.BuildNumber) \
-        --subscription $subscription_id \
-        --storage_account $(storage_account) \
-        --storage_key $azure_storage_key \
-        --resource_group $(resource_group) \
-        --workspace $(workspace)
+        -d $(datastorename) \
+        -p $(datastorepath) \
+        -c $(computetarget) \
+        -v $(Build.BuildNumber) \
+        -s $subscription_id \
+        -a $(storage_account) \
+        -k $azure_storage_key \
+        -r $(resource_group) \
+        -w $(workspace)
 - task: CopyFiles@2
   displayName: 'Copy inference and deployment files'
   inputs:
