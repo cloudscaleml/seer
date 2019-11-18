@@ -4,7 +4,7 @@
 3. Create a folder in the newly created container.
 4. Upload the `burrito` and `tacos` folder into the newly created folder
 5. Remember how you named things (both the `container` AND the `path`)
-6. In you AzureML Workspace navigate over to Datasets.
+6. In your AzureML Workspace navigate over to Datasets.
 7. Add a new Dataset by selecting the appropriate storage account and Blob Container.
 8. Fill in the Storage Account Key by retrieving it from the Storage Resource (this is found under `Access Keys` in the Storage Account Blade)
 9. Remember the name of the new `Dataset`
