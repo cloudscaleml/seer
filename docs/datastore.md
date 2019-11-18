@@ -1,4 +1,4 @@
-# Setting up your Azure Machine Learning Datstore
+# Setting up your Azure Machine Learning Datastore
 1. Download the [image files](https://aiadvocate.blob.core.windows.net/public/tacosburrito.zip)
 2. Create a container in your workspace attached storage account (this can be done using the [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/))
 3. Create a folder in the newly created container.
