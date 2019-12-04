@@ -136,6 +136,7 @@ def main(run, source_path, target_path, epochs, batch, lr):
         'categories': prep['categories'],
         'index': prep['index'],
         'generated': datetime.now().strftime('%m/%d/%y %H:%M:%S'),
+        'run': str(run.id)
     }
 
     print('Writing out metadata to {}'.format(out_file))

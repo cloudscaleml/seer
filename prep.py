@@ -63,7 +63,6 @@ def main(source_path, target_path, records, image_size, force):
 
     index = dict((name, index) for index, name in enumerate(categories))
 
-
     images = [[str(p.relative_to(source_path)),
                str(p.parent.relative_to(source_path)),
                index[str(p.parent.relative_to(source_path))]] for p in list(raw_path.glob('*/*'))]
