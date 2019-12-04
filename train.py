@@ -143,7 +143,6 @@ def main(run, source_path, target_path, epochs, batch, lr):
         json.dump(output, f)
     print('Done!')
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='data cleaning for binary image task')
     parser.add_argument('-s', '--source_path', help='directory to training data', default='data')
