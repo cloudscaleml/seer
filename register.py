@@ -37,6 +37,13 @@ def best_model(source_path):
     
 
 def main(run, source_path, target_path, universal_package_version):
+    # load previous step metadata
+    train_step = os.path.join(source_path, 'metadata.json')
+    with open(train_step) as f:
+        train = json.load(f)
+
+    for i in train:
+        print('{} => {}'.format(i, train[i]))
 
     metadata_file = 'metadata.json'
     model_file = 'model.hdf5'
@@ -61,10 +68,14 @@ def main(run, source_path, target_path, universal_package_version):
     # not offline - we can register in AML
     if not run.id.lower().startswith('offlinerun'):
         info('Register')
+
         # for tagging build number associated with build
         model['uver'] = universal_package_version
         model['file'] = original_file
-        m = Model.register(run.experiment.workspace, model_name='seer', model_path=target_path, tags=model)
+        
+        # get training run from metadata
+        training_run = Run(run.experiment, train['run'])
+        m = training_run.register_model(model_name='seer', model_path=target_path, tags=model)
         print(m)
 
     print('Done!')
