@@ -73,9 +73,7 @@ def main(run, source_path, target_path, universal_package_version):
         model['uver'] = universal_package_version
         model['file'] = original_file
         
-        # get training run from metadata
-        training_run = Run(run.experiment, train['run'])
-        m = training_run.register_model(model_name='seer', model_path=target_path, tags=model)
+        m = run.register_model(model_name='seer', model_path=target_path, tags=model)
         print(m)
 
     print('Done!')
