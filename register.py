@@ -74,8 +74,9 @@ def main(run, source_path, target_path, universal_package_version):
         model['file'] = original_file
         print(f'Uploading {target_path} to run {run.id} as the "model" folder')
 
-        run.upload_folder('model', target_path)
-        m = run.register_model(model_name='seer', model_path='model', tags=model)
+        #run.upload_folder('model', target_path)
+        #m = run.register_model(model_name='seer', model_path='model', tags=model)
+        m = Model.register(run.workspace, model_name='seer', model_path='model', tags=model)
         print(m)
 
     print('Done!')
