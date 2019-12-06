@@ -76,7 +76,7 @@ def main(run, source_path, target_path, universal_package_version):
 
         #run.upload_folder('model', target_path)
         #m = run.register_model(model_name='seer', model_path='model', tags=model)
-        m = Model.register(run.workspace, model_name='seer', model_path='model', tags=model)
+        m = Model.register(run.experiment.workspace, model_name='seer', model_path=target_path, tags=model)
         print(m)
 
     print('Done!')
