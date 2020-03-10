@@ -70,7 +70,7 @@ def main(run, source_path, target_path, build):
         info('Register')
 
         # for tagging build number associated with build
-        model['build'] = build
+        model['ref'] = build
         model['file'] = original_file
         print(f'Uploading {target_path} to run {run.id} as the "model" folder')
 

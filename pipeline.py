@@ -181,6 +181,8 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+    print(args.arguments)
+
     secrets = parse_args(args.arguments)
 
     # get aml workspace
