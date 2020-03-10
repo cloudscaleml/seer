@@ -1,8 +1,12 @@
+import os
+import sys
+import json
 import argparse
 from azureml.core import Workspace, Experiment, Datastore
 from azureml.data.datapath import DataPath, DataPathComputeBinding
 from azureml.data.data_reference import DataReference
 from azureml.core.compute import ComputeTarget, AmlCompute
+from azureml.core.authentication import ServicePrincipalAuthentication
 from azureml.pipeline.core import Pipeline, PipelineData, PipelineParameter, PublishedPipeline, PipelineEndpoint
 from azureml.pipeline.steps import PythonScriptStep, EstimatorStep
 from azureml.train.estimator import Estimator
@@ -10,10 +14,15 @@ from azureml.train.estimator import Estimator
 ##############################################################
 #    Get Azure Machine Learning Resources                    #
 ##############################################################
-def get_workspace(workspace: str, subscription: str, resource_group: str) -> Workspace:
+def get_workspace(workspace: str, subscription: str, resource_group: str, tenantId: str, clientId: str, clientSecret: str) -> Workspace:
+
+    svcprincipal = ServicePrincipalAuthentication(tenant_id=tenantId,
+                                                  service_principal_id=clientId,
+                                                  service_principal_password=clientSecret)
     return Workspace.get(name=workspace, 
                          subscription_id=subscription, 
-                         resource_group=resource_group)
+                         resource_group=resource_group,
+                         auth=svcprincipal)
 
 def get_datastore(ws: Workspace, datastore_name: str, container: str, account_name: str, account_key: str) -> Datastore:
     if not datastore_name in ws.datastores:
@@ -94,7 +103,7 @@ def train_step(datastore: Datastore, input_data: PipelineData, compute: ComputeT
 
     return seer_training, trainStep
 
-def register_step(datastore: Datastore, input_data: PipelineData, compute: ComputeTarget, package_version: str) -> (PipelineData, EstimatorStep):
+def register_step(datastore: Datastore, input_data: PipelineData, compute: ComputeTarget, build: str) -> (PipelineData, EstimatorStep):
     seer_model = PipelineData(
         "model",
         datastore=datastore,
@@ -110,7 +119,7 @@ def register_step(datastore: Datastore, input_data: PipelineData, compute: Compu
         estimator=register,
         estimator_entry_script_arguments=["--source_path", input_data, 
                                           "--target_path", seer_model,
-                                          "--universal_package_version", package_version],
+                                          "--build", build],
         inputs=[input_data],
         outputs=[seer_model],
         compute_target=compute
@@ -127,46 +136,70 @@ def add_endpoint(ws: Workspace, pipeline: PublishedPipeline, endpoint_name: str)
     # endpoint does not exist so add
     if endpoint_name in endpoint_list:
         endpoint = PipelineEndpoint.get(workspace=ws, name=endpoint_name)
-        endpoint.add_default(published_pipeline)
+        endpoint.add_default(pipeline)
     else:
         endpoint = PipelineEndpoint.publish(workspace=ws, name=endpoint_name,
-                                                pipeline=published_pipeline, description="Seer Pipeline Endpoint")
+                                                pipeline=pipeline, description="Seer Pipeline Endpoint")
     return endpoint
+
+def parse_args(file: str) -> dict:
+    args = {
+        "datastore_name": "",
+        "datastore_path": "",
+        "compute_target": "",
+        "universal_package": "",
+        "subscription": "",
+        "storage_account": "",
+        "storage_key": "",
+        "container": "",
+        "resource_group": "",
+        "workspace": "",
+        "tenantId": "",
+        "clientId": "",
+        "clientSecret": ""
+    }
+
+    variables = {}
+    with open(file) as f:
+        variables = json.load(f)
+
+    for k,v in variables.items():
+        if k in args:
+            args[k] = v
+
+    return args
 
 ##############################################################
 #    Main Run                                                #
 ##############################################################
 if __name__ == "__main__":
+
     parser = argparse.ArgumentParser(description='Seer Pipeline')
-    parser.add_argument('-d', '--datastore_name', help='Data Store name')
-    parser.add_argument('-p', '--datastore_path', help='Data Store Path')
-    parser.add_argument('-c', '--compute_target', help='Compute Target name')
-    parser.add_argument('-v', '--universal_package', help='Universal Package version (for deployment and inferencing code)')
-    parser.add_argument('-s', '--subscription', help='Azure Subscription id')
-    parser.add_argument('-a', '--storage_account', help='Storage Account name')
-    parser.add_argument('-k', '--storage_key', help='Storage Account key')
-    parser.add_argument('-r', '--resource_group', help='Resource Group name')
-    parser.add_argument('-w', '--workspace', help='Machine Learning workspace name')
+    parser.add_argument('-a', '--arguments', help='json file with arguments')
+    parser.add_argument('-b', '--build', help='build number')
+
 
     args = parser.parse_args()
 
+    secrets = parse_args(args.arguments)
+
     # get aml workspace
-    ws = get_workspace(args.workspace, args.subscription, args.resource_group)
+    ws = get_workspace(secrets["workspace"], secrets["subscription"], secrets["resource_group"], secrets["tenantId"], secrets["clientId"], secrets["clientSecret"])
 
     # get datastore
-    datastore = get_datastore(ws, args.datastore_name, 'seer', args.storage_account, args.storage_key)
+    datastore = get_datastore(ws, secrets["datastore_name"], secrets["container"], secrets["storage_account"], secrets["storage_key"])
 
     # get compute
-    compute = get_compute(ws, args.compute_target)
+    compute = get_compute(ws, secrets["compute_target"])
 
     # prep step
-    pdata, pstep = process_step(datastore, compute, args.datastore_path)
+    pdata, pstep = process_step(datastore, compute, secrets["datastore_path"])
 
     # train step
     tdata, tstep = train_step(datastore, pdata, compute)
 
     # register step (tag model with version)
-    rdata, rstep = register_step(datastore, tdata, compute, args.universal_package)
+    rdata, rstep = register_step(datastore, tdata, compute, args.build)
 
     # create pipeline from steps
     seer_pipeline = Pipeline(workspace=ws, steps=[pstep, tstep, rstep])
@@ -178,6 +211,5 @@ if __name__ == "__main__":
 
     # run pipeline
     pipeline_run = endpoint.submit('seer')                               
-    pipeline_run.set_tags(tags={'universalPackageVersion': args.universal_package})
+    pipeline_run.set_tags(tags={'build': args.build})
     print(f'Run created with ID: {pipeline_run.id}')
-

@@ -11,3 +11,4 @@ Untitled.ipynb
 *.log
 run.cmd
 .vscode
+secrets.json
