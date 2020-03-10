@@ -28,4 +28,4 @@ jobs:
     - name: 'Run Pipeline'
       shell: bash
       run: |
-        python pipeline.py -a $AML_ENV -b ${{ github.ref }}
+        python pipeline.py -a "$AML_ENV" -b ${{ github.ref }}
