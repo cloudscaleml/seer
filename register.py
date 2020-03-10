@@ -70,13 +70,13 @@ def main(run, source_path, target_path, build):
         info('Register')
 
         # for tagging build number associated with build
-        model['ref'] = build
+        model['github_ref'] = build
         model['file'] = original_file
         print(f'Uploading {target_path} to run {run.id} as the "model" folder')
 
-        #run.upload_folder('model', target_path)
-        #m = run.register_model(model_name='seer', model_path='model', tags=model)
-        m = Model.register(run.experiment.workspace, model_name='seer', model_path=target_path, tags=model)
+        run.upload_folder('model', target_path)
+        m = run.register_model(model_name='seer', model_path='model', tags=model)
+        #m = Model.register(run.experiment.workspace, model_name='seer', model_path=target_path, tags=model)
         print(m)
 
     print('Done!')

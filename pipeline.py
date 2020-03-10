@@ -159,8 +159,15 @@ def parse_args(secrets: str) -> dict:
         "clientSecret": ""
     }
 
+    variables = {}
 
-    variables = json.loads(secrets)
+    # try to load if its a file
+    if os.path.exists(secrets):
+        with open(secrets) as f:
+            variables = json.load(f)
+    # otherwise load straight as string
+    else:
+        variables = json.loads(secrets)
 
     for k,v in variables.items():
         if k in args:
