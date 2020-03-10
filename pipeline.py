@@ -142,7 +142,7 @@ def add_endpoint(ws: Workspace, pipeline: PublishedPipeline, endpoint_name: str)
                                                 pipeline=pipeline, description="Seer Pipeline Endpoint")
     return endpoint
 
-def parse_args(file: str) -> dict:
+def parse_args(secrets: str) -> dict:
     args = {
         "datastore_name": "",
         "datastore_path": "",
@@ -159,9 +159,8 @@ def parse_args(file: str) -> dict:
         "clientSecret": ""
     }
 
-    variables = {}
-    with open(file) as f:
-        variables = json.load(f)
+
+    variables = json.loads(secrets)
 
     for k,v in variables.items():
         if k in args:
