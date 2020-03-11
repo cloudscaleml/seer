@@ -8,11 +8,7 @@
        "refreshPeriodInSeconds": 1,
        "targetUtilization": 70
    },
-   "dataCollection":
-   {
-       "storageEnabled": true
-   },
-   "authEnabled": true,
+   "authEnabled": false,
    "containerResourceRequirements":
    {
        "cpu": 0.5,

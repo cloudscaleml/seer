@@ -61,6 +61,7 @@ def process_step(datastore: Datastore, compute: ComputeTarget, path_on_datastore
     prep = Estimator(source_directory='.',
                         compute_target=compute,
                         entry_script='prep.py',
+                        use_gpu=True,
                         pip_requirements_file='requirements.txt')
 
     prepStep = EstimatorStep(
