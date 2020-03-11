@@ -36,7 +36,7 @@ def best_model(source_path):
     return best_model
     
 
-def main(run, source_path, target_path, universal_package_version):
+def main(run, source_path, target_path, build):
     # load previous step metadata
     train_step = os.path.join(source_path, 'metadata.json')
     with open(train_step) as f:
@@ -70,13 +70,13 @@ def main(run, source_path, target_path, universal_package_version):
         info('Register')
 
         # for tagging build number associated with build
-        model['uver'] = universal_package_version
+        model['github_ref'] = build
         model['file'] = original_file
         print(f'Uploading {target_path} to run {run.id} as the "model" folder')
 
-        #run.upload_folder('model', target_path)
-        #m = run.register_model(model_name='seer', model_path='model', tags=model)
-        m = Model.register(run.experiment.workspace, model_name='seer', model_path=target_path, tags=model)
+        run.upload_folder('model', target_path)
+        m = run.register_model(model_name='seer', model_path='model', tags=model)
+        #m = Model.register(run.experiment.workspace, model_name='seer', model_path=target_path, tags=model)
         print(m)
 
     print('Done!')
@@ -86,7 +86,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Model Registration Process')
     parser.add_argument('-s', '--source_path', help='directory to generated models', default='data/train')
     parser.add_argument('-t', '--target_path', help='write directory', default='data/model')
-    parser.add_argument('-v', '--universal_package_version', help='the universal packages version containing inference and deployment details', default='1.0.0')
+    parser.add_argument('-b', '--build', help='build identifier', default='1.0.0')
     args = parser.parse_args()
 
     run = Run.get_context()

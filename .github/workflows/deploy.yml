@@ -1,0 +1,13 @@
+name: deploy model
+
+on: [repository_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: dispatch trigger
+      if: github.event.action == "MODEL_REGISTERED"
+      run: |
+        echo "repository_dispatch triggered"
