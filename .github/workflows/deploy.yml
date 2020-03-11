@@ -8,17 +8,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      MODEL: ${{ github.event.client_payload.model }}
-      VERSION: ${{ github.event.client_payload.version }}
-      GITHUB_REF: ${{ github.event.client_payload.github_ref }}
-
     steps:
     # checkout SHA corresponding to model
     - uses: actions/checkout@v2
       with:
-        ref: $GITHUB_REF
+        ref: ${{ github.event.client_payload.github_ref }}
 
     - name: dispatch trigger
       run: |
-        echo "model: $MODEL, version: $VERSION"
+        echo "model: ${{ github.event.client_payload.model }}, version: ${{ github.event.client_payload.version }}"
