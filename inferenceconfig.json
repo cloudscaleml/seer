@@ -4,7 +4,7 @@
     "condaFile": "seer_scoring.yml",
     "extraDockerfileSteps": null,
     "sourceDirectory": null,
-    "enableGpu": false,
+    "enableGpu": true,
     "baseImage": null,
     "baseImageRegistry": null
 }

@@ -1,9 +1,21 @@
-{
-    "containerResourceRequirements": {
-       "cpu": 2,
-       "memoryInGB": 4
-    },
-    "computeType": "ACI",
-    "enableAppInsights": "True",
-    "dns_name_label": "seer-svc"
- }
+ {
+   "computeType": "aks",
+   "autoScaler":
+   {
+       "autoscaleEnabled": true,
+       "minReplicas": 1,
+       "maxReplicas": 3,
+       "refreshPeriodInSeconds": 1,
+       "targetUtilization": 70
+   },
+   "dataCollection":
+   {
+       "storageEnabled": true
+   },
+   "authEnabled": true,
+   "containerResourceRequirements":
+   {
+       "cpu": 0.5,
+       "memoryInGB": 1.0
+   }
+}

@@ -6,7 +6,7 @@ on:
     - model-registered
 
 jobs:
-  build:
+  deploy-model:
     runs-on: ubuntu-latest
     steps:
     # checkout SHA corresponding to model
@@ -14,6 +14,10 @@ jobs:
       with:
         ref: ${{ github.event.client_payload.github_ref }}
 
-    - name: dispatch trigger
+    - uses: azure/login@v1
+        with:
+        creds: ${{ secrets.AMLENV }}
+
+    - name: deploy model
       run: |
-        echo "model: ${{ github.event.client_payload.model }}, version: ${{ github.event.client_payload.version }}"
+        az ml model deploy --name ${{ github.event.client_payload.service }} --model ${{ github.event.client_payload.model }}:${{ github.event.client_payload.version }} --compute-target ${{ github.event.client_payload.compute_target }} --inference-config inferenceconfig.json --deploy-config-file deployconfig.json --overwrite

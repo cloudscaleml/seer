@@ -1,4 +1,4 @@
 from azureml.core import Workspace
 
 ws = Workspace.from_config()
-print(ws.webservices['seer-deployment'].get_logs())
+print(ws.webservices['seer-svc'].get_logs())

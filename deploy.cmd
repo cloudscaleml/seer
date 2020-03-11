@@ -1,1 +1,1 @@
-az ml service update --name seer-svc --inference-config inferenceconfig.json --deploy-config-file deployconfig.json
+az ml model deploy --name seer-svc --model seer:28 --compute-target sauron --inference-config inferenceconfig.json --deploy-config-file deployconfig.json --overwrite

@@ -21,7 +21,7 @@ dependencies:
 
   - azureml-defaults
 
-  - tensorflow
+  - tensorflow-gpu
   - numpy
   - pillow
   - requests
