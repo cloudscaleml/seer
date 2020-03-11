@@ -15,7 +15,7 @@ jobs:
         ref: ${{ github.event.client_payload.github_ref }}
 
     - uses: azure/login@v1
-        with:
+      with:
         creds: ${{ secrets.AMLENV }}
 
     - name: deploy model
