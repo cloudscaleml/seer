@@ -1,9 +1,12 @@
 name: rebuild and run ml pipeline
 
 on:
-    push:
-        branches:
-            dev
+  push:
+    branches:
+      dev
+    paths:
+    - '**.py'
+    - 'requirements.txt'
 
 jobs:
   build-and-deploy:
