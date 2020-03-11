@@ -3,7 +3,7 @@ name: rebuild and run ml pipeline
 on:
   push:
     branches:
-      dev
+      master
     paths:
     - '**.py'
     - 'requirements.txt'
