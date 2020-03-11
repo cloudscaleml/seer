@@ -17,7 +17,7 @@ jobs:
     # checkout SHA corresponding to model
     - uses: actions/checkout@v2
       with:
-        ref: $github_ref
+        ref: $GITHUB_REF
 
     - name: dispatch trigger
       run: |
