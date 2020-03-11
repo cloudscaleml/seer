@@ -1,13 +1,24 @@
 name: deploy model
 
-on: [repository_dispatch]
+on:
+  repository_dispatch:
+    types:
+    - model-registered
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      MODEL: ${{ github.event.client_payload.model }}
+      VERSION: ${{ github.event.client_payload.version }}
+      GITHUB_REF: ${{ github.event.client_payload.github_ref }}
+
     steps:
-    - uses: actions/checkout@v1
+    # checkout SHA corresponding to model
+    - uses: actions/checkout@v2
+      with:
+        ref: $github_ref
+
     - name: dispatch trigger
-      if: github.event.action == "MODEL_REGISTERED"
       run: |
-        echo "repository_dispatch triggered"
+        echo "model: $MODEL, version: $VERSION"
