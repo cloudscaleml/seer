@@ -24,4 +24,4 @@ jobs:
 
     - name: deploy model
       run: |
-        az ml model deploy --name ${{ github.event.client_payload.service }} --model ${{ github.event.client_payload.model }}:${{ github.event.client_payload.version }} --compute-target ${{ github.event.client_payload.compute_target }} --inference-config inferenceconfig.json --deploy-config-file deployconfig.json --overwrite
+        az ml model deploy --name ${{ github.event.client_payload.service }} --model ${{ github.event.client_payload.model }}:${{ github.event.client_payload.version }} --compute-target ${{ github.event.client_payload.compute_target }} --inference-config inferenceconfig.json --deploy-config-file deployconfig.json --resource-group ${{ github.event.client_payload.resource_group }} --workspace-name ${{ github.event.client_payload.workspace }} --overwrite
