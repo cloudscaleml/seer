@@ -11,7 +11,7 @@
    "authEnabled": false,
    "containerResourceRequirements":
    {
-       "cpu": 0.5,
+       "cpu": 1.0,
        "memoryInGB": 1.0
    }
 }
