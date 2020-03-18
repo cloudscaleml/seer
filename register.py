@@ -77,6 +77,7 @@ def main(run, source_path, target_path, build):
         run.upload_folder('modelfiles', target_path)
         m = run.register_model(model_name='seer', model_path='modelfiles', tags=model)
         print(m)
+        
 
     print('Done!')
 
