@@ -93,6 +93,7 @@ def main(run, source_path, target_path, epochs, batch, lr):
                                                include_top=False, 
                                                weights='imagenet',
                                                pooling='avg')
+                                               
     base_model.trainable = True
 
     model = tf.keras.Sequential([
