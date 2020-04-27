@@ -87,13 +87,14 @@ def main(run, source_path, target_path, epochs, batch, lr):
     train_ds = train_ds.prefetch(buffer_size=5)
     train_ds = train_ds.repeat(epochs)
 
+
     # model
     info('Creating Model')
     base_model = tf.keras.applications.MobileNetV2(input_shape=img_shape,
                                                include_top=False, 
                                                weights='imagenet',
                                                pooling='avg')
-                                               
+
     base_model.trainable = True
 
     model = tf.keras.Sequential([
