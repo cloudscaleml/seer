@@ -85,7 +85,8 @@ def run(raw_data):
     payload = {
         'time': str(inference_time.total_seconds()),
         'prediction': categories[int(np.argmax(pred))],
-        'scores': predictions
+        'scores': predictions,
+        'ANOTHER': 'YAY!'
     }
 
     print('Input ({}),\nPrediction ({})'.format(post['image'], payload))
