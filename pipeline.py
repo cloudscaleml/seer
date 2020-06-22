@@ -10,6 +10,7 @@ from azureml.core.authentication import ServicePrincipalAuthentication
 from azureml.pipeline.core import Pipeline, PipelineData, PipelineParameter, PublishedPipeline, PipelineEndpoint
 from azureml.pipeline.steps import PythonScriptStep, EstimatorStep
 from azureml.train.estimator import Estimator
+from azureml.train.dnn import TensorFlow
 
 ##############################################################
 #    Get Azure Machine Learning Resources                    #
@@ -58,7 +59,7 @@ def process_step(datastore: Datastore, compute: ComputeTarget, path_on_datastore
         is_directory=True
     )
 
-    prep = Estimator(source_directory='.',
+    prep = TensorFlow(source_directory='.',
                         compute_target=compute,
                         entry_script='prep.py',
                         use_gpu=True,
@@ -83,7 +84,7 @@ def train_step(datastore: Datastore, input_data: PipelineData, compute: ComputeT
         is_directory=True
     )
 
-    train = Estimator(source_directory='.',
+    train = TensorFlow(source_directory='.',
                         compute_target=compute,
                         entry_script='train.py',
                         use_gpu=True,
