@@ -43,7 +43,6 @@ def init():
     model = tf.keras.models.load_model(model_path)
     model.summary()
     print('Done!')
-
     print('Initialized model "{}" at {}'.format(model_path, datetime.datetime.now()))
 
 def process_image(path):
