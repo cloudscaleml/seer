@@ -19,4 +19,4 @@ class AMLCallback(tf.keras.callbacks.Callback):
     def on_train_batch_end(self, batch, logs=None):
         if logs != None:
             for k in logs.keys():
-                self.run.log(f'epoch_{k}', logs[k])
+                self.run.log(f'{k}', logs[k])
