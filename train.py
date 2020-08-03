@@ -102,6 +102,7 @@ def main(run, source_path, target_path, epochs, batch, lr):
         tf.keras.layers.Dense(len(labels), activation='softmax')
     ])
 
+
     model.compile(optimizer=tf.keras.optimizers.Adam(lr=lr), 
               loss='sparse_categorical_crossentropy', 
               metrics=['accuracy'])
