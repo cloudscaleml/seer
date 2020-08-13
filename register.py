@@ -34,7 +34,6 @@ def best_model(source_path):
             maxsum = sm
             
     return best_model
-    
 
 def main(run, source_path, target_path, build):
     # load previous step metadata
