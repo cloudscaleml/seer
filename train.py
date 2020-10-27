@@ -2,7 +2,6 @@ import os
 import csv
 import json
 import math
-import shutil
 import argparse
 import numpy as np
 import tensorflow as tf
