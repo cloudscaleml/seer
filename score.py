@@ -15,10 +15,10 @@ from azureml.core.model import Model
 def init():
     global model, image_size, index, categories
 
-    aml_logger = logging.getLogger('azureml')
-    aml_logger.setLevel(logging.DEBUG)
-    server_logger = logging.getLogger('root')
-    server_logger.setLevel(logging.DEBUG)
+    #aml_logger = logging.getLogger('azureml')
+    #aml_logger.setLevel(logging.DEBUG)
+    #server_logger = logging.getLogger('root')
+    #server_logger.setLevel(logging.DEBUG)
 
     try:
         path = Model.get_model_path('seer')
